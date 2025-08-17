@@ -1,6 +1,6 @@
-# 💊 Progetto AIFA – Analisi del Consumo di Farmaci in Italia
+# 💊 Progetto AIFA – Analisi del Consumo di Farmaci in Italia (dal 2016)
 
-![Logo AIFA](https://www.aifa.gov.it/documents/20142/0/logo-aifa.png)  
+![Logo AIFA](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/AIFA_Logo.svg/800px-AIFA_Logo.svg.png)  
 _Analisi clinica e visualizzazione dei dati farmaceutici pubblici tramite BigQuery e SQL_
 
 ---
@@ -16,7 +16,7 @@ L’obiettivo è identificare trend, anomalie, e differenze regionali per suppor
 
 ### 1. **Download dei Dataset**
 - Fonte: [Open Data AIFA](https://www.aifa.gov.it/web/guest/open-data)
-- Periodo: 2016–2023
+- Periodo: dal 2016 al presente (aggiornabile annualmente)
 - Tipologia: CSV, delimitatore `|`
 
 ### 2. **Pulizia e Unificazione**
@@ -26,7 +26,7 @@ L’obiettivo è identificare trend, anomalie, e differenze regionali per suppor
 
 ### 3. **Caricamento su BigQuery**
 - Dataset: `farmaci_aifa`
-- Tabelle: `DATASET_AIFA_CONSUMO_FARMACI_2016`, `..._2017`, `..._2018`
+- Tabelle: `DATASET_AIFA_CONSUMO_FARMACI_2016`, `..._2017`, `..._2023`
 - Schema:  
   `anno`, `regione`, `atc1`, `descrizione_atc1`, `consumo_ddd`, `spesa_convenzionata`, `spesa_flusso_tracciabilita`, `numero_confezioni`
 
@@ -37,3 +37,4 @@ L’obiettivo è identificare trend, anomalie, e differenze regionali per suppor
   FROM ...
   GROUP BY anno, regione, atc1
   ORDER BY spesa_totale DESC;
+
