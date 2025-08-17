@@ -5,7 +5,8 @@ _Dott. Carchedi Foca R.M. – Farmacista & Data Analyst_
 
 <img src="https://www.aifa.gov.it/o/aifa-theme/images/aifa/AIFA2021_Col(LR).png"
      alt="Logo AIFA"
-     width="150" />
+     width="150" />  
+ 
 ---
 
 ## Indice
