@@ -1,12 +1,13 @@
 
 # Analisi del Consumo di Farmaci in Italia   
-  <span style="font-size: 28px;">Analisi clinica e visualizzazione dei dati farmaceutici pubblici</span><br>
+  <span style="font-size: 28px;"> <b>Analisi clinica e visualizzazione dei dati farmaceutici pubblici</b> </span><br>
   <em style="font-size: 30px;">Dott. Carchedi Foca R.M. – Farmacista & Data Analyst </em>  💊💻📈
 </p><img src="https://www.aifa.gov.it/o/aifa-theme/images/aifa/AIFA2021_Col(LR).png" width="150" alt="Logo AIFA"> <p align="center">
 
 ---
 ## 💻 Tecnologie e Metodi - Stack Analitico 🧰
-SQL – BigQuery – Excel – Python – Power BI
+<b>  SQL – BigQuery – Excel – Python – Power BI </b>
+
 _Questo progetto si avvale di un ecosistema analitico integrato per l’elaborazione, visualizzazione e interpretazione dei dati farmaceutici pubblici._
 
 
