@@ -1,9 +1,14 @@
-# 💊 Progetto AIFA – Analisi del Consumo di Farmaci in Italia (dal 2016)
 
-![Logo AIFA](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/AIFA_Logo.svg/800px-AIFA_Logo.svg.png)  
-_Analisi clinica e visualizzazione dei dati farmaceutici pubblici tramite BigQuery e SQL_
+# Analisi del Consumo di Farmaci in Italia   
+  <span style="font-size: 28px;">Analisi clinica e visualizzazione dei dati farmaceutici pubblici</span><br>
+  <em style="font-size: 30px;">Dott. Carchedi Foca R.M. – Farmacista & Data Analyst </em>  💊💻📈
+</p><img src="https://www.aifa.gov.it/o/aifa-theme/images/aifa/AIFA2021_Col(LR).png" width="150" alt="Logo AIFA"> <p align="center">
 
 ---
+## 💻 Tecnologie e Metodi - Stack Analitico 🧰
+SQL – BigQuery – Excel – Python – Power BI
+_Questo progetto si avvale di un ecosistema analitico integrato per l’elaborazione, visualizzazione e interpretazione dei dati farmaceutici pubblici._
+
 
 ## 🔍 Obiettivo del Progetto
 
@@ -15,7 +20,7 @@ L’obiettivo è identificare trend, anomalie, e differenze regionali per suppor
 ## 🧱 Fasi del Lavoro
 
 ### 1. **Download dei Dataset**
-- Fonte: [Open Data AIFA](https://www.aifa.gov.it/web/guest/open-data)
+- Fonte: [Open Data AIFA](https://www.aifa.gov.it/spesa-e-consumo-relativi-al-flusso-della-farmaceutica-convenzionata-e-degli-acquisti-diretti)
 - Periodo: dal 2016 al presente (aggiornabile annualmente)
 - Tipologia: CSV, delimitatore `|`
 
@@ -25,7 +30,7 @@ L’obiettivo è identificare trend, anomalie, e differenze regionali per suppor
 - Rimozione righe vuote e note a piè pagina
 
 ### 3. **Caricamento su BigQuery**
-- Dataset: `farmaci_aifa`
+- Dataset: `analisi-clinica-su-bigquery.DATASET_AIFA_CONSUMO_FARMACI_2016_2023`
 - Tabelle: `DATASET_AIFA_CONSUMO_FARMACI_2016`, `..._2017`, `..._2023`
 - Schema:  
   `anno`, `regione`, `atc1`, `descrizione_atc1`, `consumo_ddd`, `spesa_convenzionata`, `spesa_flusso_tracciabilita`, `numero_confezioni`
@@ -33,8 +38,4 @@ L’obiettivo è identificare trend, anomalie, e differenze regionali per suppor
 ### 4. **Query SQL**
 - **Query #1**: Totale spesa per anno, regione e ATC1  
   ```sql
-  SELECT anno, regione, atc1, SUM(spesa_convenzionata + spesa_flusso_tracciabilita) AS spesa_totale
-  FROM ...
-  GROUP BY anno, regione, atc1
-  ORDER BY spesa_totale DESC;
-
+ 
