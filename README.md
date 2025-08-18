@@ -62,6 +62,16 @@ La query completa è disponibile in
 
 ---
 
+
+## Analisi Variazione Categorie Farmaceutiche ATC Pre e Post COVID19
+
+Questa sezione del progetto analizza la variazione di spesa farmaceutica per categoria ATC (livello 1) tra il periodo **Pre-COVID (2016–2019)** e **Post-COVID (2020–2023)**, a partire da un report PDF dell'AIFA.
+
+### 📁 Struttura del progetto
+
+
+---
+
 ## Sintesi Metodologica
 
 I dati sono espressi come valori netti (al netto di pay-back, sconti e contributi) e non includono la spesa lorda iniziale.  
