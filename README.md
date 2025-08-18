@@ -1,6 +1,6 @@
 # Analisi del Consumo di Farmaci in Italia
 
-**Analisi clinica e visualizzazione dei dati farmaceutici pubblici**  
+## **Analisi clinica e visualizzazione dei dati farmaceutici pubblici**  
 _Dott. Carchedi Foca R.M. – Farmacista & Data Analyst_  
 
 <img src="https://www.aifa.gov.it/o/aifa-theme/images/aifa/AIFA2021_Col(LR).png"
@@ -21,11 +21,11 @@ _Dott. Carchedi Foca R.M. – Farmacista & Data Analyst_
 ---
 
 ## Tecnologie e Metodi
-
-- SQL / BigQuery  
-- Excel  
-- Power BI  
-- (In sviluppo) Python  
+ 
+- BigQuery
+- SQL
+- Excel   
+- Python  
 
 ---
 
@@ -49,7 +49,16 @@ Individuare trend, anomalie e differenze regionali per supportare decisioni clin
    - Rimozione righe vuote  
 
 3. Caricamento su BigQuery  
-   - Dataset: `analisi-clinica-su-bigquery.DATASET_AIFA_2016_2023`  
+   - Dataset: `analisi-clinica-su-bigquery.DATASET_AIFA_2016_2023`
+     
+4. Esportazione e analisi in Excel
+   - Le query SQL hanno prodotto dataset esportati in Excel per analisi preliminari e visualizzazioni.
+
+5. Estrazione da PDF con Python
+   - È stato sviluppato uno script Python per analizzare tabelle PDF (report AIFA) ed estrarre dati strutturati.
+
+6. Insight finali
+   - I risultati sono stati confrontati e integrati con quelli ottenuti da Excel e BigQuery.
 
 ---
 
