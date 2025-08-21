@@ -5,8 +5,8 @@ _Dott. Carchedi Foca R.M. – Farmacista Abilitato & Data Analyst_
 
 <img src="https://www.aifa.gov.it/o/aifa-theme/images/aifa/AIFA2021_Col(LR).png"
      alt="Logo AIFA"
-     width="150" />  
- 
+     width="150" />
+
 ---
 
 ## Indice
@@ -35,7 +35,7 @@ _Dott. Carchedi Foca R.M. – Farmacista Abilitato & Data Analyst_
 
 # Introduzione
 
-Lo scopo del seguente progetto è stato di analizzare in modo strutturato gli Open Data pubblicati da AIFA relativi alla spesa e al consumo di farmaci in Italia con l'obbiettivo di individuare e prevedere i trend, le anomalie e le differenze regionali per supportare decisioni cliniche, politiche sanitarie, ottimizzare la spesa sanitaria e migliorare la pianificazione delle risorse.
+Lo scopo del seguente progetto è stato di analizzare in modo strutturato gli Open Data dell'AIFA relativi alla spesa e al consumo di farmaci in Italia con l'obbiettivo di individuare e prevedere i trend, le anomalie e le differenze regionali per supportare decisioni cliniche, politiche sanitarie, ottimizzare la spesa sanitaria e migliorare la pianificazione delle risorse.
 
 ### Domanda di ricerca
 Quali classi di farmaci mostrano un aumento significativo nel consumo tra il 2016 e il 2023, e come possiamo prevedere il consumo futuro per supportare decisioni di politica sanitaria e medicina di precisione.
@@ -74,7 +74,7 @@ Per approfondimenti sui meccanismi di pay-back, sugli sconti convenzionali e sul
 
 ### 1. Download dei dataset  
    - Fonte: [Open Data AIFA](https://www.aifa.gov.it/spesa-e-consumo-relativi-al-flusso-della-farmaceutica-convenzionata-e-degli-acquisti-diretti)  
-   - Periodo: 2016–2023  
+   - Periodo di riferimento: dal 2016 al 2023  
    - Formato: CSV
 
 
@@ -101,6 +101,8 @@ Le query SQL eseguite su BigQuery hanno generato dataset strutturati, successiva
  - Pulizia finale dei dati e verifica della coerenza
  - Trasformazioni tabellari e analisi statistica con tabelle pivot
  - Costruzione di grafici statici e dashboard tematiche
+
+Inoltre, i dataset ottenuti con SQL sono stati incrociati con gli Open Data dell’ISTAT relativi alla popolazione residente per ciascuna regione e anno (dal 2019 in poi). I file ISTAT, uno per anno, sono stati riunificati e incrociati manualmente in Excel con i dati AIFA, al fine di calcolare il consumo pro capite per regione e anno. Questa metrica ha permesso di normalizzare i dati di consumo, rendendo possibile un confronto più equo tra territori con diversa densità abitativa.
 
 ### 5. Estrazione da PDF con Python
    - È stato sviluppato uno script Python ['compute_atc_variation.py'](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/blob/main/scripts/compute_atc_variation.py) che automatizza l’analisi di un documento PDF per analizzare le tabelle (report AIFA ottenuti precedentemente con Excel) ed estrarre dati strutturati.
@@ -166,4 +168,6 @@ Può essere compilato in HTML o PDF direttamente da RStudio.
 
 - AIFA: [AIFA Open Data](https://www.aifa.gov.it/open-data)
 
-- AIFA: [Monitoraggio Spesa Farmaceutica](https://www.aifa.gov.it/documents/20142/241044/Monitoraggio_Spesa_gennaio-dicembre2016_agg.pdf)  
+- AIFA: [Monitoraggio Spesa Farmaceutica](https://www.aifa.gov.it/documents/20142/241044/Monitoraggio_Spesa_gennaio-dicembre2016_agg.pdf)
+
+- ISTAT: [Open Data Popolazione Residente](https://demo.istat.it/app/?i=POS)
