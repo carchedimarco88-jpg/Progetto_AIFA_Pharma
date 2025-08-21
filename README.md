@@ -19,7 +19,7 @@ _Dott. Carchedi Foca R.M. – Farmacista Abilitato & Data Analyst_
    - [Fasi del Lavoro](#Fasi-del-Lavoro)
    - [Query SQL](#Query-SQL)
    - [Dataset pubblico su BigQuery](Dataset-pubblico-su-BigQuery)
-   - [Report-Statici](Report-Statici)
+   - [Report Statici](Report-Statici)
    - [Report RMarkdown](Report-RMarkdown)
      
 3. [Risultati e discussione](#Risultati-e-discussione)
@@ -59,8 +59,10 @@ Innovativa (collegamento alla medicina personalizzata)
 - Python
 - R
 
-### Sintesi Metodologica
+## Sintesi Metodologica
 
+
+### Nota sui costi calcolati
 I dati sono espressi come valori netti (al netto di pay-back, sconti e contributi) e non includono la spesa lorda iniziale.  
 Per approfondimenti sui meccanismi di pay-back, sugli sconti convenzionali e sul calcolo dei valori netti vs. lordi, consulta il file [METODOLOGIA.md](./METODOLOGIA.md).
 
@@ -138,7 +140,7 @@ Il dataset è in sola lettura: non è possibile modificarlo.
 
 ## Report Statici
 
-# Analisi Variazione Categorie Farmaceutiche ATC Pre e Post COVID19
+### Analisi Variazione Categorie Farmaceutiche ATC Pre e Post COVID19
 Questa sezione del progetto analizza la variazione di spesa farmaceutica per categoria ATC (livello 1) tra il periodo **Pre-COVID (2016–2019)** e **Post-COVID (2020–2023)**, a partire dal database ottenuto dalle tabelle open dell'AIFA.
 
 ---
@@ -162,7 +164,6 @@ Può essere compilato in HTML o PDF direttamente da RStudio.
 
 ## Riferimenti
 
-- AIFA Open Data: https://www.aifa.gov.it/content/open-data
+- AIFA: [AIFA Open Data](https://www.aifa.gov.it/open-data)
 
-- Monitoraggio Spesa Farmaceutica (PDF):  
-  https://www.aifa.gov.it/documents/20142/241044/Monitoraggio_Spesa_gennaio-dicembre2016_agg.pdf  
+- AIFA: [Monitoraggio Spesa Farmaceutica](https://www.aifa.gov.it/documents/20142/241044/Monitoraggio_Spesa_gennaio-dicembre2016_agg.pdf)  
