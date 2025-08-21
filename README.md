@@ -14,15 +14,18 @@ _Dott. Carchedi Foca R.M. – Farmacista Abilitato & Data Analyst_
 
 1. [Introduzione](#introduzione)
    - [Domanda di ricerca](#domanda-di-ricerca)
+
 2. [Tecnologie e Metodi](#Tecnologie-e-Metodi)
    - [Fasi del Lavoro](#Fasi-del-Lavoro)
    - [Query SQL](#Query-SQL)
    - [Dataset pubblico su BigQuery](Dataset-pubblico-su-BigQuery)
    - [Report-Statici](Report-Statici)
    - [Report RMarkdown](Report-RMarkdown)
-3.[Risultati e discussione](#Risultati-e-discussione)
+     
+3. [Risultati e discussione](#Risultati-e-discussione)
    - [Fasi del Lavoro](#fasi-del-lavoro)
    - [Query SQL](#query-sql)
+     
 - [Conclusioni](Conclusioni)  
 - [Riferimenti](#riferimenti)  
 
@@ -62,6 +65,7 @@ I dati sono espressi come valori netti (al netto di pay-back, sconti e contribut
 Per approfondimenti sui meccanismi di pay-back, sugli sconti convenzionali e sul calcolo dei valori netti vs. lordi, consulta il file [METODOLOGIA.md](./METODOLOGIA.md).
 
 ---
+
 # Risultati e discussione
 
 ## Fasi del Lavoro
