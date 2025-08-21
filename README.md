@@ -75,10 +75,10 @@ Per approfondimenti sui meccanismi di pay-back, sugli sconti convenzionali e sul
 ### 1. Download dei dataset  
    - Fonte: [Open Data AIFA](https://www.aifa.gov.it/spesa-e-consumo-relativi-al-flusso-della-farmaceutica-convenzionata-e-degli-acquisti-diretti)  
    - Periodo: 2016–2023  
-   - Formato: CSV (delimitatore `|`)
+   - Formato: CSV
 
 
-### 2. Pulizia e Unificazione automatizzata tramite script *Python* [`Extract_and_Summarize.py`](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/blob/main/scripts/extract_and_summarize.py)
+### 2. Pulizia e unificazione automatizzata tramite script *Python* [Extract_and_Summarize.py](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/blob/main/scripts/extract_and_summarize.py)
 
    Lo script esegue:
    - Uniformazione encoding e delimitatori
