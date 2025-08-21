@@ -33,8 +33,19 @@ _Dott. Carchedi Foca R.M. – Farmacista & Data Analyst_
 ## Obiettivo del Progetto
 
 Analizzare in modo strutturato i dati open pubblicati da AIFA relativi alla spesa e al consumo di farmaci in Italia.  
-Individuare trend, anomalie e differenze regionali per supportare decisioni cliniche, politiche sanitarie e studi accademici.
+Individuare e prevedere i trend, le anomalie e le differenze regionali per supportare decisioni cliniche, politiche sanitarie e studi accademici per ottimizzare la spesa sanitaria e migliorare la pianificazione delle risorse, attraverso:
+ - Pulizia e armonizzazione del dataset AIFA atte a garantire coerenza e qualità dei dati per analisi affidabili.
+ - Analisi esplorativa per classe terapeutica e regione → Evidenzia differenze territoriali e comportamenti prescrittivi, utile per politiche regionali.
+ - Modelli predittivi (Random Forest, ARIMA, Prophet) che permettono di stimare il consumo futuro, anticipando fabbisogni e costi.
+ - Metriche di performance (RMSE, MAE) che validano l’accuratezza dei modelli, rendendo lo studio robusto e replicabile.
+ - Report automatici con RMarkdown e visualizzazioni interattive che rendono i risultati accessibili a stakeholder non tecnici quali dirigenti sanitari e policy maker.
 
+### Domanda di ricerca
+Quali classi di farmaci mostrano un aumento significativo nel consumo tra il 2016 e il 2023, e come possiamo prevedere il consumo futuro per supportare decisioni di politica sanitaria e medicina di precisione?
+Domanda:
+Quantitativa (analisi e modelli)
+Applicabile (politiche sanitarie)
+Innovativa (collegamento alla medicina personalizzata)
 ---
 
 ## Fasi del Lavoro
@@ -43,7 +54,6 @@ Individuare trend, anomalie e differenze regionali per supportare decisioni clin
    - Fonte: [Open Data AIFA](https://www.aifa.gov.it/spesa-e-consumo-relativi-al-flusso-della-farmaceutica-convenzionata-e-degli-acquisti-diretti)  
    - Periodo: 2016–2023  
    - Formato: CSV (delimitatore `|`)
-
 
 
 ### 2. Pulizia e Unificazione automatizzata tramite script *Python* [`Extract_and_Summarize.py`](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/blob/main/scripts/extract_and_summarize.py)
@@ -71,17 +81,15 @@ Le query SQL eseguite su BigQuery hanno generato dataset strutturati, successiva
  - Costruzione di grafici statici e dashboard tematiche
 
 ### 5. Estrazione da PDF con Python
-   - È stato sviluppato uno script Python per analizzare tabelle PDF (report AIFA) ed estrarre dati strutturati.
-     ['compute_atc_variation.py'](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/blob/main/scripts/compute_atc_variation.py)
-     che automatizza l’analisi di un documento PDF.
+   - È stato sviluppato uno script Python ['compute_atc_variation.py'](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/blob/main/scripts/compute_atc_variation.py) che automatizza l’analisi di un documento PDF per analizzare le tabelle (report AIFA ottenuti precedentemente con Excel) ed estrarre dati strutturati.
    - I risultati sono stati confrontati e integrati con quelli ottenuti da Excel e BigQuery.
 
-### 6. Modellazione predittiva e analisi avanzata con R È stata sviluppata una pipeline in R.
+### 6. Modellazione predittiva e analisi avanzata con R attraverso lo sviluppo di una pipeline.
  - Pulizia e armonizzazione del dataset AIFA (2016–2023)
  - Analisi esplorativa dei trend di consumo per classe terapeutica e regione
  - Costruzione di modelli predittivi (Random Forest, ARIMA, Prophet) per stimare il consumo futuro
  - Valutazione delle performance dei modelli (RMSE, MAE)
- - Generazione di report automatici con RMarkdown e visualizzazioni interattive
+ - Generazione di report automatici con RMarkdown [`analisi_farmaci.Rmd`](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/blob/main/reports/Analisi%20consumo%20farmaci.rmd) e visualizzazioni interattive
 
 
 ## Query SQL
@@ -93,13 +101,37 @@ La query completa è disponibile in
 
 ---
 
+- ## Dataset pubblico su BigQuery
+
+Il dataset creato per lo studio con le tabelle AIFA è disponibile pubblicamente su BigQuery e contiene i dati AIFA sul consumo dei farmaci dal 2016 al 2023.
+
+[Accedi al dataset su BigQuery](https://console.cloud.google.com/bigquery?hl=it&invt=Ab6BZg&project=primo-progetto-bigquery&ws=!1m4!1m3!3m2!1sanalisi-clinica-su-bigquery!2sDATASET_AIFA_CONSUMO_FARMACI_2016_2023)
+
+Chiunque può:
+- Visualizzare il dataset
+- Eseguire query
+- Scaricare i risultati
+
+Il dataset è in sola lettura: non è possibile modificarlo.## Dataset pubblico su BigQuery
+
+---
+
+## Report RMarkdown
+
+Il file [`analisi_farmaci.Rmd`](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/blob/main/reports/Analisi%20consumo%20farmaci.rmd) contiene:
+- Pulizia e aggregazione del dataset AIFA (2016–2023)
+- Analisi dei trend per classe ATC
+- Modellazione predittiva con Random Forest
+- Visualizzazioni e confronto tra valori reali e stimati
+- Discussione, limiti e proposte future
+
+Può essere compilato in HTML o PDF direttamente da RStudio.
+
+---
 
 ## Analisi Variazione Categorie Farmaceutiche ATC Pre e Post COVID19
 
 Questa sezione del progetto analizza la variazione di spesa farmaceutica per categoria ATC (livello 1) tra il periodo **Pre-COVID (2016–2019)** e **Post-COVID (2020–2023)**, a partire dal database ottenuto dalle tabelle open dell'AIFA.
-
-### 📁 Struttura del progetto
-
 
 ---
 
@@ -113,20 +145,6 @@ Per approfondimenti sui meccanismi di pay-back, sugli sconti convenzionali e sul
 ## Riferimenti
 
 - AIFA Open Data: https://www.aifa.gov.it/content/open-data
-
-- ## Dataset pubblico su BigQuery
-
-Il dataset creato per lo studio co le tabelle AIFA è disponibile pubblicamente su BigQuery e contiene i dati AIFA sul consumo dei farmaci dal 2016 al 2023.
-
-[Accedi al dataset su BigQuery](https://console.cloud.google.com/bigquery?hl=it&invt=Ab6BZg&project=primo-progetto-bigquery&ws=!1m4!1m3!3m2!1sanalisi-clinica-su-bigquery!2sDATASET_AIFA_CONSUMO_FARMACI_2016_2023)
-
-Chiunque può:
-- Visualizzare il dataset
-- Eseguire query
-- Scaricare i risultati
-
-⚠️ Il dataset è in sola lettura: non è possibile modificarlo.## 📊 Dataset pubblico su BigQuery
-
 
 - Monitoraggio Spesa Farmaceutica (PDF):  
   https://www.aifa.gov.it/documents/20142/241044/Monitoraggio_Spesa_gennaio-dicembre2016_agg.pdf  
