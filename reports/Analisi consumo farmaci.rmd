@@ -1,0 +1,124 @@
+---
+title: "Analisi del consumo farmaci"
+author: "CarchediFRM"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: true
+    toc_depth: 2
+    number_sections: true
+  pdf_document: default
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(readxl)
+library(janitor)
+library(caret)
+```
+
+## Introduzione
+Questo report analizza il consumo di farmaci in Italia tra il 2016 e il 2023, con l’obiettivo di identificare le classi ATC in crescita e costruire un modello predittivo per supportare decisioni di politica sanitaria e medicina di precisione.
+
+## Fase 1: Caricamento e pulizia del dataset
+
+```{r} 
+df <- read_excel("consumo_farmaci.xlsx") %>%
+  clean_names() %>%
+  filter(if_all(everything(), ~ !is.na(.))) %>%
+  distinct() %>%
+  mutate(
+    regione = str_to_title(regione),
+    codice_atc = str_to_upper(atc1),
+    spesa_totale = as.numeric(spesa_totale)
+  )
+```
+
+## Fase 2: Analisi esplorativa dei trend
+
+
+```{r}
+df_trend <- df %>%
+  group_by(anno, codice_atc) %>%
+  summarise(consumo_totale = sum(spesa_totale, na.rm = TRUE)) %>%
+  ungroup()
+
+
+ggplot(df_trend, aes(x = anno, y = consumo_totale, color = codice_atc)) +
+  geom_line(linewidth = 1.2) +
+  labs(
+    title = "Trend di consumo farmaci per classe ATC",
+    x = "Anno", y = "Spesa totale (€)", color = "Classe ATC"
+  ) +
+  theme_minimal()
+
+df_variazione <- df_trend %>%
+  filter(anno %in% c(2016, 2023)) %>%
+  pivot_wider(names_from = anno, values_from = consumo_totale) %>%
+  mutate(variazione_perc = (`2023` - `2016`) / `2016` * 100) %>%
+  arrange(desc(variazione_perc))
+
+df_variazione
+```
+
+## Fase 3: Modellazione predittiva
+
+```{r}
+if (!require(caret)) {
+  install.packages("caret")
+  library(caret)
+} else {
+  library(caret)
+}
+
+df_model <- df_trend %>%
+  filter(!is.na(consumo_totale)) %>%
+  mutate(codice_atc = as.factor(codice_atc))
+
+set.seed(123)
+model_rf <- train(
+  consumo_totale ~ anno + codice_atc,
+  data = df_model,
+  method = "rf",
+  trControl = trainControl(method = "cv", number = 5)
+)
+
+df_model$predizione <- predict(model_rf, newdata = df_model)
+
+ggplot(df_model, aes(x = consumo_totale, y = predizione, color = codice_atc)) +
+  geom_point(alpha = 0.6) +
+  geom_abline(slope = 1, intercept = 0, linetype = "dashed", color = "gray") +
+  labs(
+    title = "Confronto tra spesa reale e prevista",
+    x = "Spesa reale (€)",
+    y = "Spesa prevista (€)"
+  ) +
+  theme_minimal()
+
+model_rf
+
+```
+##  Discussione
+Il modello Random Forest ha mostrato una buona capacità di adattamento ai dati storici. Alcune classi ATC come P, V e A hanno registrato una crescita significativa, suggerendo un possibile aumento della domanda in ambiti specifici della medicina.
+
+
+## Limiti
+Il modello non include variabili cliniche o demografiche
+
+La previsione si basa solo su dati aggregati per anno e classe ATC
+
+Non è stato testato su dati futuri o esterni
+
+## Proposte future
+Integrare dati regionali e demografici
+
+Applicare modelli di serie temporali (ARIMA, Prophet)
+
+Costruire una dashboard interattiva con Shiny
+
+Automatizzare il report con RMarkdown e pubblicarlo su GitHub
+
+## Conclusioni
+Questa analisi fornisce una base solida per monitorare l’evoluzione del consumo farmaci in Italia e supportare decisioni strategiche in ambito sanitario. Il modello predittivo può essere esteso e raffinato per applicazioni più avanzate nella medicina personalizzata.
