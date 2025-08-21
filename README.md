@@ -3,9 +3,13 @@
 ## **Analisi clinica e visualizzazione dei dati farmaceutici pubblici**  
 _Dott. Carchedi Foca R.M. – Farmacista Abilitato & Data Analyst_  
 
-<img src="https://www.aifa.gov.it/o/aifa-theme/images/aifa/AIFA2021_Col(LR).png"
-     alt="Logo AIFA"
-     width="150" />
+<div style="display: flex; justify-content: center; align-items: center; gap: 30px; flex-wrap: wrap; padding: 20px;">
+  <img src="https://www.aifa.gov.it/o/aifa-theme/images/aifa/AIFA2021_Col(LR).png" alt="AIFA" style="height: 60px;">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png" alt="SQL" style="height: 60px;">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python" style="height: 60px;">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/R_logo.svg" alt="R" style="height: 60px;">
+
+</div>
 
 ---
 
