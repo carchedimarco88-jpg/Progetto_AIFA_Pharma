@@ -64,7 +64,7 @@ Innovativa (collegamento alla medicina personalizzata)
 
 ### Nota sui costi calcolati
 I dati sono espressi come valori netti (al netto di pay-back, sconti e contributi) e non includono la spesa lorda iniziale.  
-Per approfondimenti sui meccanismi di pay-back, sugli sconti convenzionali e sul calcolo dei valori netti vs. lordi, è disponibile il file [METODOLOGIA.md](./METODOLOGIA.md).
+Per approfondimenti sui meccanismi di pay-back, sugli sconti convenzionali e sul calcolo dei valori netti vs. lordi, è disponibile il file: [METODOLOGIA.md](./METODOLOGIA.md).
 
 ---
 
