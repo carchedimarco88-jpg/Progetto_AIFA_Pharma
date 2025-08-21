@@ -1,7 +1,7 @@
 # Analisi del Consumo di Farmaci in Italia
 
 ## **Analisi clinica e visualizzazione dei dati farmaceutici pubblici**  
-_Dott. Carchedi Foca R.M. – Farmacista & Data Analyst_  
+_Dott. Carchedi Foca R.M. – Farmacista Abilitato & Data Analyst_  
 
 <img src="https://www.aifa.gov.it/o/aifa-theme/images/aifa/AIFA2021_Col(LR).png"
      alt="Logo AIFA"
