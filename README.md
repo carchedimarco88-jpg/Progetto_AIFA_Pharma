@@ -35,12 +35,7 @@ _Dott. Carchedi Foca R.M. – Farmacista Abilitato & Data Analyst_
 
 # Introduzione
 
-Lo scopo del seguente progetto è stato di analizzare in modo strutturato gli Open Data pubblicati da AIFA relativi alla spesa e al consumo di farmaci in Italia con l'obbiettivo di individuare e prevedere i trend, le anomalie e le differenze regionali per supportare decisioni cliniche, politiche sanitarie, ottimizzare la spesa sanitaria e migliorare la pianificazione delle risorse, attraverso una metodologia rigorosa che ha previsto:
- - Pulizia e armonizzazione del dataset AIFA atte a garantire coerenza e qualità dei dati per analisi affidabili.
- - Analisi esplorativa per classe terapeutica e regione che permette di evidenziare differenze territoriali e comportamenti prescrittivi, utile per politiche regionali.
- - Modelli predittivi (Random Forest, ARIMA, Prophet) che permettono di stimare il consumo futuro, anticipando fabbisogni e costi.
- - Metriche di performance (RMSE, MAE) che validano l’accuratezza dei modelli, rendendo lo studio robusto e replicabile.
- - Report automatici con RMarkdown e visualizzazioni interattive che rendono i risultati accessibili a stakeholder non tecnici quali dirigenti sanitari e policy maker.
+Lo scopo del seguente progetto è stato di analizzare in modo strutturato gli Open Data pubblicati da AIFA relativi alla spesa e al consumo di farmaci in Italia con l'obbiettivo di individuare e prevedere i trend, le anomalie e le differenze regionali per supportare decisioni cliniche, politiche sanitarie, ottimizzare la spesa sanitaria e migliorare la pianificazione delle risorse.
 
 ### Domanda di ricerca
 Quali classi di farmaci mostrano un aumento significativo nel consumo tra il 2016 e il 2023, e come possiamo prevedere il consumo futuro per supportare decisioni di politica sanitaria e medicina di precisione.
@@ -61,10 +56,15 @@ Innovativa (collegamento alla medicina personalizzata)
 
 ## Sintesi Metodologica
 
+ - Pulizia e armonizzazione del dataset AIFA atta a garantire coerenza e qualità dei dati per analisi affidabili.
+ - Analisi esplorativa per classe terapeutica e regione che permette di evidenziare differenze territoriali e comportamenti prescrittivi, utile per politiche regionali.
+ - Modelli predittivi (Random Forest, ARIMA, Prophet) che permettono di stimare il consumo futuro, anticipando fabbisogni e costi.
+ - Metriche di performance (RMSE, MAE) che validano l’accuratezza dei modelli, rendendo lo studio robusto e replicabile.
+ - Report automatici con RMarkdown e visualizzazioni interattive che rendono i risultati accessibili a stakeholder non tecnici quali dirigenti sanitari e policy maker.
 
 ### Nota sui costi calcolati
 I dati sono espressi come valori netti (al netto di pay-back, sconti e contributi) e non includono la spesa lorda iniziale.  
-Per approfondimenti sui meccanismi di pay-back, sugli sconti convenzionali e sul calcolo dei valori netti vs. lordi, consulta il file [METODOLOGIA.md](./METODOLOGIA.md).
+Per approfondimenti sui meccanismi di pay-back, sugli sconti convenzionali e sul calcolo dei valori netti vs. lordi, è disponibile il file [METODOLOGIA.md](./METODOLOGIA.md).
 
 ---
 
