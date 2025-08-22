@@ -42,8 +42,9 @@ _Dott. Carchedi Foca R.M. – Farmacista Abilitato & Data Analyst_
 Lo scopo del seguente progetto è stato di analizzare in modo strutturato gli Open Data dell'AIFA relativi alla spesa e al consumo di farmaci in Italia con l'obbiettivo di individuare e prevedere i trend, le anomalie e le differenze regionali per supportare decisioni cliniche, politiche sanitarie, ottimizzare la spesa sanitaria e migliorare la pianificazione delle risorse.
 
 ### Domanda di ricerca
-Quali classi di farmaci mostrano un aumento significativo nel consumo tra il 2016 e il 2023, e come possiamo prevedere il consumo futuro per supportare decisioni di politica sanitaria e medicina di precisione.
-Domanda:
+Quali classi di farmaci mostrano un aumento significativo nel consumo tra il 2016 e il 2023 e come possiamo prevedere il consumo futuro per supportare decisioni di politica sanitaria e medicina di precisione.
+
+La domanda è:
 Quantitativa (analisi e modelli)
 Applicabile (politiche sanitarie)
 Innovativa (collegamento alla medicina personalizzata)
@@ -94,7 +95,7 @@ Il dataset è stato progettato e realizzato appositamente per questo studio, con
 
    - Inizializzazione del progetto su Google Cloud Platform
    - Modellazione dello schema relazionale delle tabelle
-   - Ingestione dei file CSV e normalizzazione dei dati
+   - Caricamento dei file CSV e normalizzazione dei dati
    - Validazione della coerenza semantica e sintattica
    - Pubblicazione del dataset su BigQuery: [DATASET_AIFA_CONSUMO_FARMACI_2016_2023](https://console.cloud.google.com/bigquery?hl=it&invt=Ab6BZg&project=primo-progetto-bigquery&ws=!1m4!1m3!3m2!1sanalisi-clinica-su-bigquery!2sDATASET_AIFA_CONSUMO_FARMACI_2016_2023)
 
