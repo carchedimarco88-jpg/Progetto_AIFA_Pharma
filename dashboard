@@ -1,0 +1,218 @@
+
+R version 4.5.1 (2025-06-13 ucrt) -- "Great Square Root"
+Copyright (C) 2025 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64
+
+R è un software libero ed è rilasciato SENZA ALCUNA GARANZIA.
+Siamo ben lieti se potrai redistribuirlo, ma sotto certe condizioni.
+Scrivi 'license()' o 'licence()' per maggiori dettagli.
+
+R è un progetto collaborativo con molti contributi esterni.
+Scrivi 'contributors()' per maggiori informazioni e 'citation()'
+per sapere come citare R o i pacchetti nelle pubblicazioni.
+
+Scrivi 'demo()' per una dimostrazione, 'help()' per la guida
+oppure 'help.start()' per la guida nel browser HTML.
+Scrivi 'q()' per uscire da R.
+
+[Caricato workspace precedentemente salvato]
+
+> df %>%
++   filter(atc1 == "J") %>%
++   group_by(regione) %>%
++   summarise(spesa = sum(spesa_totale, na.rm = TRUE)) %>%
++   arrange(desc(spesa)) %>%
++   ggplot(aes(x = reorder(regione, spesa), y = spesa)) +
++   geom_col(fill = "steelblue") +
++   coord_flip() +
++   labs(title = "Spesa per ATC J per regione",
++        x = "Regione", y = "Spesa totale (€)") +
++   theme_minimal()
+Errore in df %>% filter(atc1 == "J") %>% group_by(regione) %>% summarise(spesa = sum(spesa_totale,  : 
+  non trovo la funzione "%>%"
+> 
+
+> library(tidyverse)
+── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   3.5.2     ✔ tibble    3.3.0
+✔ lubridate 1.9.4     ✔ tidyr     1.3.1
+✔ purrr     1.1.0     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+> df %>%
++   filter(atc1 == "J") %>%  # puoi cambiare la classe ATC
++   group_by(regione) %>%
++   summarise(spesa = sum(spesa_totale, na.rm = TRUE)) %>%
++   arrange(desc(spesa)) %>%
++   ggplot(aes(x = reorder(regione, spesa), y = spesa)) +
++   geom_col(fill = "steelblue") +
++   coord_flip() +
++   labs(title = "Spesa per ATC J per regione",
++        x = "Regione", y = "Spesa totale (€)") +
++   theme_minimal()
+> ggsave("spesa_per_regione.png", width = 10, height = 6)
+Messaggio di avvertimento:
+In grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y,  :
+  conversion failure on 'Spesa totale (€)' in 'mbcsToSbcs': for € (U+20AC)
+> labs(title = "Spesa per ATC J per regione",
++      x = "Regione", y = "Spesa totale (euro)")
+$x
+[1] "Regione"
+
+$y
+[1] "Spesa totale (euro)"
+
+$title
+[1] "Spesa per ATC J per regione"
+
+attr(,"class")
+[1] "labels"
+> ggsave("spesa_per_regione.png", width = 10, height = 6)
+> df %>%
++   group_by(anno, atc1) %>%
++   summarise(spesa = sum(spesa_totale)) %>%
++   ggplot(aes(x = anno, y = spesa, color = atc1)) +
++   geom_line(linewidth = 1.2) +
++   labs(title = "Trend spesa farmaci per classe ATC",
++        x = "Anno", y = "Spesa totale (euro)", color = "Classe ATC") +
++   theme_minimal()
+`summarise()` has grouped output by 'anno'. You can override using the
+`.groups` argument.
+> df %>%
++   group_by(regione) %>%
++   summarise(spesa = sum(spesa_totale)) %>%
++   ggplot(aes(x = reorder(regione, spesa), y = spesa)) +
++   geom_col(fill = "darkorange") +
++   coord_flip() +
++   labs(title = "Spesa totale farmaci per regione",
++        x = "Regione", y = "Spesa totale (euro)") +
++   theme_minimal()
+> df %>%
++   filter(anno == 2023) %>%
++   group_by(atc1) %>%
++   summarise(spesa = sum(spesa_totale)) %>%
++   ggplot(aes(x = reorder(atc1, spesa), y = spesa)) +
++   geom_col(fill = "purple") +
++   labs(title = "Spesa per classe ATC nel 2023",
++        x = "Classe ATC", y = "Spesa totale (euro)") +
++   theme_minimal()
+> df %>%
++   group_by(regione, anno) %>%
++   summarise(spesa = sum(spesa_totale)) %>%
++   ggplot(aes(x = anno, y = regione, fill = spesa)) +
++   geom_tile(color = "white") +
++   scale_fill_gradient(low = "lightyellow", high = "darkred") +
++   labs(title = "Heatmap spesa farmaci per Regione e Anno",
++        x = "Anno", y = "Regione", fill = "Spesa (€)") +
++   theme_minimal()
+`summarise()` has grouped output by 'regione'. You can override using the
+`.groups` argument.
+> summarise(spesa = sum(spesa_totale), .groups = "drop")
+Errore: oggetto 'spesa_totale' non trovato
+> df %>%
++   group_by(atc1, anno) %>%
++   summarise(spesa = sum(spesa_totale)) %>%
++   ggplot(aes(x = anno, y = atc1, fill = spesa)) +
++   geom_tile(color = "white") +
++   scale_fill_gradient(low = "lightblue", high = "darkblue") +
++   labs(title = "Heatmap spesa per Classe ATC e Anno",
++        x = "Anno", y = "Classe ATC", fill = "Spesa (€)") +
++   theme_minimal()
+`summarise()` has grouped output by 'atc1'. You can override using the
+`.groups` argument.
+> ggsave("heatmap_atc_anno.png", width = 10, height = 6)
+> ggsave("heatmap_atc_anno.pdf", width = 10, height = 6)
+> library(shiny)
+> library(tidyverse)
+> 
+> df <- read.csv("spesa.csv")  # o read_excel("consumo_farmaci.xlsx")
+Errore in file(file, "rt") : non è possibile aprire la connessione
+In aggiunta: Messaggio di avvertimento:
+In file(file, "rt") :
+  non è possibile aprire il file 'spesa.csv': No such file or directory
+> 
+> ui <- fluidPage(
++   titlePanel("Dashboard Spesa Farmaci"),
++   sidebarLayout(
++     sidebarPanel(
++       selectInput("atc", "Classe ATC:", choices = unique(df$atc1)),
++       sliderInput("anno", "Anno:", min = min(df$anno), max = max(df$anno), value = max(df$anno))
++     ),
++     mainPanel(
++       tabsetPanel(
++         tabPanel("Bar Regione", plotOutput("grafico_regione")),
++         tabPanel("Bar ATC", plotOutput("grafico_atc")),
++         tabPanel("Heatmap Regione/Anno", plotOutput("heatmap_regione")),
++         tabPanel("Heatmap ATC/Anno", plotOutput("heatmap_atc")),
++         tabPanel("Tabella", tableOutput("tabella"))
++       )
++     )
++   )
++ )
+> 
+> server <- function(input, output) {
++   dati_filtrati <- reactive({
++     df %>% filter(atc1 == input$atc, anno == input$anno)
++   })
++ 
++   output$grafico_regione <- renderPlot({
++     df %>%
++       group_by(regione) %>%
++       summarise(spesa = sum(spesa_totale)) %>%
++       ggplot(aes(x = reorder(regione, spesa), y = spesa)) +
++       geom_col(fill = "darkorange") +
++       coord_flip() +
++       labs(title = "Spesa totale farmaci per regione",
++            x = "Regione", y = "Spesa totale (euro)") +
++       theme_minimal()
++   })
++ 
++   output$grafico_atc <- renderPlot({
++     df %>%
++       filter(anno == input$anno) %>%
++       group_by(atc1) %>%
++       summarise(spesa = sum(spesa_totale)) %>%
++       ggplot(aes(x = reorder(atc1, spesa), y = spesa)) +
++       geom_col(fill = "purple") +
++       labs(title = paste("Spesa per classe ATC nel", input$anno),
++            x = "Classe ATC", y = "Spesa totale (euro)") +
++       theme_minimal()
++   })
++ 
++   output$heatmap_regione <- renderPlot({
++     df %>%
++       group_by(regione, anno) %>%
++       summarise(spesa = sum(spesa_totale), .groups = "drop") %>%
++       ggplot(aes(x = anno, y = regione, fill = spesa)) +
++       geom_tile(color = "white") +
++       scale_fill_gradient(low = "lightyellow", high = "darkred") +
++       labs(title = "Heatmap spesa farmaci per Regione e Anno",
++            x = "Anno", y = "Regione", fill = "Spesa (euro)") +
++       theme_minimal()
++   })
++ 
++   output$heatmap_atc <- renderPlot({
++     df %>%
++       group_by(atc1, anno) %>%
++       summarise(spesa = sum(spesa_totale), .groups = "drop") %>%
++       ggplot(aes(x = anno, y = atc1, fill = spesa)) +
++       geom_tile(color = "white") +
++       scale_fill_gradient(low = "lightblue", high = "darkblue") +
++       labs(title = "Heatmap spesa per Classe ATC e Anno",
++            x = "Anno", y = "Classe ATC", fill = "Spesa (euro)") +
++       theme_minimal()
++   })
++ 
++   output$tabella <- renderTable({
++     dati_filtrati()
++   })
++ }
+> 
+> shinyApp(ui = ui, server = server)
+
+Listening on http://127.0.0.1:4959
+
