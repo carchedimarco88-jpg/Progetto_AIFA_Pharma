@@ -120,6 +120,12 @@ Inoltre, i dataset ottenuti con SQL sono stati incrociati con gli Open Data dell
  - Valutazione delle performance dei modelli (RMSE, MAE)
  - Generazione di report automatici con RMarkdown [`analisi_farmaci.Rmd`](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/blob/main/reports/Analisi%20consumo%20farmaci.rmd) e visualizzazioni interattive
 
+### 7. Pubblicazione della dashboard interattiva  
+È stata creata una dashboard web interattiva che sintetizza i principali risultati dell’analisi, con visualizzazioni dinamiche per classe terapeutica, regione e trend temporali. La dashboard è accessibile pubblicamente e consente l’esplorazione autonoma dei dati da parte di stakeholder e professionisti sanitari.
+
+[Accedi alla dashboard](https://carchedimarco88-jpg.github.io/Progetto_AIFA_Pharma/)
+
+---
 
 ## Query SQL
 
@@ -154,7 +160,8 @@ Questa sezione del progetto analizza la variazione di spesa farmaceutica per cat
 
 ## Report RMarkdown
 
-Il file [`analisi_farmaci.Rmd`](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/blob/main/reports/Analisi%20consumo%20farmaci.rmd) contiene:
+Il file [Analisi consumo farmaci – RMarkdown](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/blob/main/reports/Analisi%20consumo%20farmaci.rmd) contiene:
+
 - Pulizia e aggregazione del dataset AIFA (2016–2023)
 - Analisi dei trend per classe ATC
 - Modellazione predittiva con Random Forest
