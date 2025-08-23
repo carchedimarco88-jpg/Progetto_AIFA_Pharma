@@ -13,25 +13,25 @@ _Dott. Carchedi Foca R.M. – Farmacista Abilitato & Data Analyst_
 
 ---
 
-## Indice
+## Indice del Progetto
 
-
-1. [Introduzione](#introduzione)
+### 1. [Introduzione](#introduzione)
    - [Domanda di ricerca](#domanda-di-ricerca)
 
-2. [Tecnologie e Metodi](#Tecnologie-e-Metodi)
+### 2. [Tecnologie e Metodi](#Tecnologie-e-Metodi)
    - [Fasi del Lavoro](#Fasi-del-Lavoro)
    - [Query SQL](#Query-SQL)
    - [Dataset pubblico su BigQuery](Dataset-pubblico-su-BigQuery)
    - [Report Statici](Report-Statici)
    - [Report RMarkdown](Report-RMarkdown)
      
-3. [Risultati e discussione](#Risultati-e-discussione)
+### 3. [Risultati e discussione](#Risultati-e-discussione)
    - [Fasi del Lavoro](#fasi-del-lavoro)
    - [Query SQL](#query-sql)
      
-- [Conclusioni](Conclusioni)  
-- [Riferimenti](#riferimenti)  
+### - [Conclusioni](Conclusioni)  
+
+### - [Riferimenti](#riferimenti)  
 
 ---
 
@@ -118,12 +118,13 @@ Inoltre, i dataset ottenuti con SQL sono stati incrociati con gli Open Data dell
  - Analisi esplorativa dei trend di consumo per classe terapeutica e regione
  - Costruzione di modelli predittivi (Random Forest, ARIMA, Prophet) per stimare il consumo futuro
  - Valutazione delle performance dei modelli (RMSE, MAE)
- - Generazione di report automatici con RMarkdown [`analisi_farmaci.Rmd`](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/blob/main/reports/Analisi%20consumo%20farmaci.rmd) e visualizzazioni interattive
+ - Generazione di report automatici con RMarkdown [`Analisi farmaci.Rmd`](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/blob/main/reports/Analisi%20consumo%20farmaci.rmd) e visualizzazioni interattive
 
 ### 7. Pubblicazione della dashboard interattiva  
 È stata creata una dashboard web interattiva che sintetizza i principali risultati dell’analisi, con visualizzazioni dinamiche per classe terapeutica, regione e trend temporali. La dashboard è accessibile pubblicamente e consente l’esplorazione autonoma dei dati da parte di stakeholder e professionisti sanitari.
 
-> **Dashboard disponibile**: [Visualizza la versione interattiva online](https://carchedimarco88-jpg.github.io/Progetto_AIFA_Pharma/)
+[Dashboard Interattiva](https://carchedimarco88-jpg.github.io/Progetto_AIFA_Pharma/dashboard.html)  
+Visualizzazione dinamica dei trend di consumo farmaci per regione e classe terapeutica.
 
 ---
 
