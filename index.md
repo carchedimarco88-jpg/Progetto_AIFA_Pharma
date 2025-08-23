@@ -8,8 +8,8 @@ Descrizione: Studio sull’andamento del consumo farmaceutico in Italia tra il 2
 
 # Analisi del Consumo di Farmaci in Italia
 
-## **Analisi clinica e visualizzazione dei dati farmaceutici pubblici**  
-_Dott. Carchedi Foca R.M. – Farmacista Abilitato & Data Analyst_  
+## **Analisi epidemiologica dei dati farmaceutici pubblici**  
+ _Dott. Carchedi Foca R.M. – Farmacista Abilitato & Data Analyst_  
 
 <div style="display: flex; gap: 30px; flex-wrap: wrap; padding: 20px;">
   <img src="https://www.aifa.gov.it/o/aifa-theme/images/aifa/AIFA2021_Col(LR).png" alt="AIFA" style="height: 60px;">
