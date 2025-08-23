@@ -174,7 +174,7 @@ Questa sezione del progetto analizza la variazione di spesa farmaceutica per cat
 
 ## Report RMarkdown
 
-Il file [Analisi consumo farmaci – RMarkdown](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/blob/main/Analisi-consumo-farmaci.html) contiene:
+Il file [Analisi consumo farmaci – RMarkdown](https://rpubs.com/CarchediFRM/1338164) contiene:
 
 - Pulizia e aggregazione del dataset AIFA (2016–2023)
 - Analisi dei trend per classe ATC
@@ -211,7 +211,7 @@ La disponibilità di nuovi antivirali orali per COVID-19 (molnupiravir, nirmatre
 
 Nonostante le iniziative di stewardship, il consumo è salito del 12 % (da 820 a 920 DDD/1000 abitanti·die), probabilmente per l’uso preventivo in setting ospedalieri durante le ondate pandemiche e per l’incremento delle terapie combinate nei pazienti critici.
 
-![Screenshot 2025-08-23 204158](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/raw/main/Screenshot%202025-08-23%20204158.png)
+![Screenshot 2025-08-23 204158](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/blob/main/Screenshot%202025-08-24%20001510.png)
 
 ## Impatto clinico e gestionale
 
