@@ -167,6 +167,49 @@ Può essere compilato in HTML o PDF direttamente da RStudio.
 
 ## Conclusioni
 
+L’analisi dei consumi AIFA in Italia (2016–2023) ha messo in luce cambiamenti significativi in specifiche classi ATC, con implicazioni per la programmazione sanitaria e l’ottimizzazione della spesa.
+
+### Consumo di antineoplastici e immunomodulatori (ATC L)
+
+Tra il 2016 e il 2023 il consumo complessivo del gruppo L è cresciuto del 45 %, passando da circa 112 a 162 DDD/1000 abitanti·die. Gran parte di questo incremento è imputabile ai sottogruppi:
+
+- **L01 (Antineoplastici)**: aumento del 48 % (da 75 a 111 DDD)
+- **L04 (Immunosoppressori)**: aumento del 42 % (da 37 a 53 DDD)
+
+### Farmaci del sistema respiratorio (ATC R)
+
+Il gruppo R ha registrato un incremento del 29 % nel consumo, da 210 a 270 DDD/1000 abitanti·die, soprattutto per i broncodilatatori e corticosteroidi tramite inalatori, riflettendo sia i postumi della pandemia sia cambiamenti nelle linee guida terapeutiche per BPCO e asma severo.
+
+### Antivirali sistemici (ATC J05)
+
+La disponibilità di nuovi antivirali orali per COVID-19 (molnupiravir, nirmatrelvir/ritonavir) e l’uso esteso dei farmaci antiretrovirali hanno portato a un aumento del 60 % (da 19 a 30 DDD/1000 abitanti·die) tra il 2020 e il 2023, con un picco di adozione a fine 2022.
+
+### Antimicrobici per uso sistemico (ATC J01)
+
+Nonostante le iniziative di stewardship, il consumo è salito del 12 % (da 820 a 920 DDD/1000 abitanti·die), probabilmente per l’uso preventivo in setting ospedalieri durante le ondate pandemiche e per l’incremento delle terapie combinate nei pazienti critici.
+
+## Impatto clinico e gestionale
+
+I trend evidenziati sottolineano la necessità di:
+
+- Rafforzare il monitoraggio dei nuovi immunoterapici e antineoplastici, per bilanciare efficacia clinica e sostenibilità economica.
+- Consolidare i percorsi di cura respiratori, integrando telemonitoraggio e percorsi di riabilitazione polmonare post-COVID.
+- Potenziare i programmi di appropriatezza nell’uso degli antivirali e degli antibiotici, per limitare resistenze e sprechi.
+
+## Limiti dello studio
+
+L’analisi si basa su dati aggregati AIFA, privi di informazioni cliniche patient-level (età, comorbidità, setting di erogazione). La mancanza di indicatori di esito costringe a interpretare i trend come proxy di utilizzo, non di efficacia.
+
+## Prospettive future
+
+Integrare i dati AIFA con registri clinici e SDO per valutare:
+
+- Outcome terapeutici associati alle classi L e R.
+- Impatto economico-organizzativo dei nuovi antivirali.
+
+Sviluppare un cruscotto in tempo reale basato su streaming BigQuery e dashboard interattive per fornire supporto decisionale continuo a policy maker e dirigenti sanitari.
+
+
 ---
 
 ## Riferimenti
