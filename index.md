@@ -27,8 +27,8 @@ Descrizione: Studio sull’andamento del consumo farmaceutico in Italia tra il 2
    - [Domanda di ricerca](#domanda-di-ricerca)
 
 ### 2. [Tecnologie e Metodi](#Tecnologie-e-Metodi)
+   - [Sintesi Metodologica](Sintesi-Metodologica)
    - [Fasi del Lavoro](#Fasi-del-Lavoro)
-   - [Query SQL](#Query-SQL)
    
 ### 3. [Risultati e discussione](#Risultati-e-discussione)
    - [Fasi del Lavoro](#fasi-del-lavoro)
@@ -38,9 +38,9 @@ Descrizione: Studio sull’andamento del consumo farmaceutico in Italia tra il 2
    - [Report RMarkdown](#Report-RMarkdown)
    - [Dashboard Interattiva](#Dashboard-Interattiva) con modello **Prophet**
      
-### - [Conclusioni](Conclusioni)  
+### • [Conclusioni](Conclusioni)  
 
-### - [Riferimenti](#riferimenti)  
+### • [Riferimenti](#riferimenti)  
 
 ---
 
@@ -84,8 +84,6 @@ I dati sono espressi come valori netti (al netto di pay-back, sconti e contribut
 Per approfondimenti sui meccanismi di pay-back, sugli sconti convenzionali e sul calcolo dei valori netti vs. lordi, è disponibile il file [Metodologia](./METODOLOGIA.md).
 
 ---
-
-# Risultati e discussione
 
 ## Fasi del Lavoro
 
@@ -135,6 +133,10 @@ Inoltre, i dataset ottenuti con SQL sono stati incrociati con gli Open Data dell
 ### 7. Pubblicazione della  [Dashboard Interattiva](https://carchedimarco88-jpg.github.io/Progetto_AIFA_Pharma/dashboard.html)
 
 È stata creata una dashboard web interattiva che sintetizza i principali risultati dell’analisi, con visualizzazione dinamica dei trend temporali di consumo farmaci per regione e classe terapeutica. La dashboard è accessibile pubblicamente e consente l’esplorazione autonoma dei dati da parte di stakeholder e professionisti sanitari al seguente link [Dashboard Interattiva](https://carchedimarco88-jpg.github.io/Progetto_AIFA_Pharma/dashboard.html).
+
+---
+
+# Risultati e discussione
 
 ---
 
