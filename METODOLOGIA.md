@@ -38,12 +38,12 @@ I valori di spesa utilizzati in questo progetto provengono da:
 Di seguito uno snippet Python che ricostruisce il valore lordo a partire dal netto, applicando percentuali ipotetiche di pay-back e sconto.
 
 ```python
-# Input: spesa netta per anno, regione e ATC (livello 1)
+## Input: spesa netta per anno, regione e ATC (livello 1)
 dati_netti = {
     '2023': {'Lombardia': 120_000_000, 'Lazio': 95_000_000}
 }
 
-# Percentuali di pay-back e sconto (esempio)
+## Percentuali di pay-back e sconto (esempio)
 percentuali = {
     'payback': 0.05,      # 5%
     'sconto': 0.07        # 7%
