@@ -37,6 +37,7 @@ Descrizione: Studio sull’andamento del consumo farmaceutico in Italia tra il 2
    - [Report Statici](#Report-Statici)
    - [Report RMarkdown](#Report-RMarkdown)
    - [Dashboard Interattiva](#Dashboard-Interattiva) con modello **Prophet**
+   - [Verifica di coerenza](#Verifica-di-coerenza) (o validazione empirica)
      
 ### • [Conclusioni](Conclusioni)  
 
@@ -199,6 +200,10 @@ La dashboard analizza il consumo di farmaci in Italia dal 2016 al 2023, con visu
 - Evidenzia la spesa totale per regione, ordinata per valore
 - Include una previsione automatica della spesa farmaceutica con il modello **Prophet**
 
+### Verifica di coerenza (o validazione empirica)
+
+Per confermare la coerenza dei dati elaborati, è stato effettuato un confronto diretto con i valori lordi pubblicati da AIFA nei report ufficiali OsMed. I dati estratti tramite script Python dai PDF istituzionali sono stati incrociati con quelli aggregati su BigQuery e normalizzati pro capite. Il confronto ha evidenziato una corrispondenza significativa tra i valori di spesa per classe ATC e regione, sia in termini di andamento temporale che di distribuzione territoriale. Questa sovrapposizione conferma la validità del processo di parsing, aggregazione e analisi, e rafforza l’affidabilità del modello predittivo come strumento di supporto alle decisioni cliniche e di politica sanitaria.
+
 ---
 
 ## Conclusioni
@@ -241,6 +246,7 @@ I trend evidenziati sottolineano la necessità di:
 ## Limiti dello studio
 
 L’analisi si basa su dati aggregati AIFA, privi di informazioni cliniche patient-level (età, comorbidità, setting di erogazione). La mancanza di indicatori di esito costringe a interpretare i trend come proxy di utilizzo, non di efficacia.
+Un limite rilevante del progetto riguarda la natura aggregata dei dati AIFA, che non consente analisi a livello di singolo paziente né l’identificazione di pattern clinici individuali. Per superare questa barriera, una possibile evoluzione del lavoro potrebbe prevedere la collaborazione con enti clinici e IRCCS, al fine di accedere a dataset anonimizzati patient-level, contenenti informazioni su diagnosi, comorbidità e terapie personalizzate. Questo permetterebbe di integrare i modelli predittivi con variabili cliniche e demografiche, migliorando la precisione delle previsioni e aprendo la strada a scenari di medicina di precisione. Inoltre, l’adozione di protocolli di interoperabilità (es. HL7 FHIR) e l’uso di ambienti sicuri per il trattamento dei dati sanitari (come data lake ospedalieri) garantirebbero il rispetto delle normative GDPR e la validità scientifica dell’approccio.
 
 ## Prospettive future
 
@@ -251,6 +257,9 @@ Integrare i dati AIFA con registri clinici e SDO per valutare:
 
 Sviluppare un cruscotto in tempo reale basato su streaming BigQuery e dashboard interattive per fornire supporto decisionale continuo a policy maker e dirigenti sanitari.
 
+---
+
+*"L’intelligenza artificiale non sostituirà i medici, ma i medici che la usano sostituiranno quelli che non lo fanno." — Eric Topol*
 
 ---
 
@@ -261,3 +270,13 @@ Sviluppare un cruscotto in tempo reale basato su streaming BigQuery e dashboard 
 - AIFA: [Monitoraggio Spesa Farmaceutica](https://www.aifa.gov.it/documents/20142/241044/Monitoraggio_Spesa_gennaio-dicembre2016_agg.pdf)
 
 - ISTAT: [Open Data Popolazione Residente](https://demo.istat.it/app/?i=POS)
+
+- [Guida CT AI/ML AIFA](https://www.aifa.gov.it/documents/20142/871583/Guida_CT_AI_ML_v_1.0_del_24.05.2021_IT.pdf)
+
+- [Rapporto OsMed 2023 – L’uso dei farmaci in Italia](https://www.aifa.gov.it/documents/20142/2594020/AIFA_Rapporto%20OsMed_2023.pdf)
+
+- [Full Pharma Insights di IQVIA](https://www.iqvia.com/locations/italy/solutions/servizi-informativi/full-pharma-insights)
+
+- [Analisi degli studi clinici: come i big data predicono il successo dei farmaci](https://editverse.com/it/Analisi-degli-studi-clinici%3A-come-i-big-data-predicono-il-successo-dei-farmaci-con-un%27accuratezza-dell%2785%25/)
+
+- [Intelligenza artificiale nelle sperimentazioni cliniche: è l’ora della regolamentazione](https://www.agendadigitale.eu/sanita/intelligenza-artificiale-nelle-sperimentazioni-cliniche-e-lora-della-regolamentazione/)
