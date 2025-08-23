@@ -1,7 +1,13 @@
+# Dashboard AIFA - Pharma
+# Autore: Carchedi Foca Marco
+# Ultima modifica: 23 agosto 2025
+
 library(shiny)
 library(tidyverse)
 library(readxl)
 library(janitor)
+library(shiny)
+library(rsconnect)
 
 df <- read_excel("consumo_farmaci.xlsx") %>%
   clean_names() %>%
@@ -49,3 +55,4 @@ server <- function(input, output) {
 }
 
 shinyApp(ui = ui, server = server)
+
