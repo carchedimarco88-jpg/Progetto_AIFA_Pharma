@@ -29,13 +29,14 @@ Descrizione: Studio sull’andamento del consumo farmaceutico in Italia tra il 2
 ### 2. [Tecnologie e Metodi](#Tecnologie-e-Metodi)
    - [Fasi del Lavoro](#Fasi-del-Lavoro)
    - [Query SQL](#Query-SQL)
-   - [Dataset pubblico su BigQuery](Dataset-pubblico-su-BigQuery)
-   - [Report Statici](Report-Statici)
-   - [Report RMarkdown](Report-RMarkdown)
-     
+   
 ### 3. [Risultati e discussione](#Risultati-e-discussione)
    - [Fasi del Lavoro](#fasi-del-lavoro)
    - [Query SQL](#query-sql)
+   - [Dataset pubblico su BigQuery](#Dataset-pubblico-su-BigQuery)
+   - [Report Statici](#Report-Statici)
+   - [Report RMarkdown](#Report-RMarkdown)
+   - [Dashboard Interattiva](#Dashboard-Interattiva) con modello **Prophet**
      
 ### - [Conclusioni](Conclusioni)  
 
@@ -50,6 +51,7 @@ Descrizione: Studio sull’andamento del consumo farmaceutico in Italia tra il 2
 Lo scopo del seguente progetto è stato di analizzare in modo strutturato gli Open Data dell'AIFA relativi alla spesa e al consumo di farmaci in Italia con l'obbiettivo di individuare e prevedere i trend, le anomalie e le differenze regionali per supportare decisioni cliniche, politiche sanitarie, ottimizzare la spesa sanitaria e migliorare la pianificazione delle risorse.
 
 ![qualsiasi](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/raw/main/Screenshot%202025-08-23%20195157.png)
+[Figura.1](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/blob/main/ANALISI%20VARIAZIONE%20CATEGORIE%20FARMACEUTICHE%20ATC%20PRE%20E%20POST%20COVID19.pdf) Classifica delle categorie farmaceutiche ATC in Italia in funzione della variazione di spesa nei periodi pre e post Covid-19.
 
 ### Domanda di ricerca
 Quali classi di farmaci mostrano un aumento significativo nel consumo tra il 2016 e il 2023 e come possiamo prevedere il consumo futuro per supportare decisioni di politica sanitaria e medicina di precisione.
@@ -79,7 +81,7 @@ Innovativa (collegamento alla medicina personalizzata)
 
 ### Nota sui costi calcolati
 I dati sono espressi come valori netti (al netto di pay-back, sconti e contributi) e non includono la spesa lorda iniziale.  
-Per approfondimenti sui meccanismi di pay-back, sugli sconti convenzionali e sul calcolo dei valori netti vs. lordi, è disponibile il file: [METODOLOGIA.md](./METODOLOGIA.md).
+Per approfondimenti sui meccanismi di pay-back, sugli sconti convenzionali e sul calcolo dei valori netti vs. lordi, è disponibile il file [Metodologia](./METODOLOGIA.md).
 
 ---
 
@@ -93,9 +95,9 @@ Per approfondimenti sui meccanismi di pay-back, sugli sconti convenzionali e sul
    - Formato: CSV
 
 
-### 2. Pulizia e unificazione automatizzata tramite script *Python* [Extract_and_Summarize.py](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/blob/main/scripts/extract_and_summarize.py)
+### 2. Pulizia e unificazione automatizzata tramite script *Python* 
+Lo Script .py denominato [Extract and Summarize](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/blob/main/scripts/extract_and_summarize.py) esegue:
 
-   Lo script esegue:
    - Uniformazione encoding e delimitatori
    - Rimozione righe vuote e note
    - Salvataggio dei file pronti per BigQuery 
@@ -107,7 +109,7 @@ Il dataset è stato progettato e realizzato appositamente per questo studio, con
    - Modellazione dello schema relazionale delle tabelle
    - Caricamento dei file CSV e normalizzazione dei dati
    - Validazione della coerenza semantica e sintattica
-   - Pubblicazione del dataset su BigQuery: [DATASET_AIFA_CONSUMO_FARMACI_2016_2023](https://console.cloud.google.com/bigquery?hl=it&invt=Ab6BZg&project=primo-progetto-bigquery&ws=!1m4!1m3!3m2!1sanalisi-clinica-su-bigquery!2sDATASET_AIFA_CONSUMO_FARMACI_2016_2023)
+   - Pubblicazione del dataset su BigQuery: [Dataset AIFA dal 2016 al 2023](https://console.cloud.google.com/bigquery?hl=it&invt=Ab6BZg&project=primo-progetto-bigquery&ws=!1m4!1m3!3m2!1sanalisi-clinica-su-bigquery!2sDATASET_AIFA_CONSUMO_FARMACI_2016_2023)
 
      
 ### 4. Esportazione con SQL, trasformazione ed analisi in Excel  
@@ -120,7 +122,7 @@ Le query SQL eseguite su BigQuery hanno generato dataset strutturati, successiva
 Inoltre, i dataset ottenuti con SQL sono stati incrociati con gli Open Data dell’ISTAT relativi alla popolazione residente per ciascuna regione e anno (dal 2019 in poi). I file ISTAT, uno per anno, sono stati riunificati e incrociati manualmente in Excel con i dati AIFA, al fine di calcolare il consumo pro capite per regione e anno. Questa metrica ha permesso di normalizzare i dati di consumo, rendendo possibile un confronto più equo tra territori con diversa densità abitativa.
 
 ### 5. Estrazione da PDF con Python
-   - È stato sviluppato uno script Python ['compute_atc_variation.py'](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/blob/main/scripts/compute_atc_variation.py) che automatizza l’analisi di un documento PDF per analizzare le tabelle (report AIFA ottenuti precedentemente con Excel) ed estrarre dati strutturati.
+   - È stato sviluppato uno script Python denominato [Compute ATC Variation](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/blob/main/scripts/compute_atc_variation.py) che automatizza l’analisi di un documento PDF per analizzare le tabelle (report AIFA ottenuti precedentemente con Excel) ed estrarre dati strutturati.
    - I risultati sono stati confrontati e integrati con quelli ottenuti da Excel e BigQuery.
 
 ### 6. Modellazione predittiva e analisi avanzata con R attraverso lo sviluppo di una pipeline.
@@ -128,13 +130,11 @@ Inoltre, i dataset ottenuti con SQL sono stati incrociati con gli Open Data dell
  - Analisi esplorativa dei trend di consumo per classe terapeutica e regione
  - Costruzione di modelli predittivi (Random Forest, ARIMA, Prophet) per stimare il consumo futuro
  - Valutazione delle performance dei modelli (RMSE, MAE)
- - Generazione di report automatici con RMarkdown [`Analisi farmaci.Rmd`](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/blob/main/reports/Analisi%20consumo%20farmaci.rmd) e visualizzazioni interattive
+ - Generazione di report automatici con RMarkdown [Analisi spesa farmaceutica – RMarkdown](https://rpubs.com/CarchediFRM/1338164) e visualizzazioni interattive.
 
-### 7. Pubblicazione della dashboard interattiva  
-È stata creata una dashboard web interattiva che sintetizza i principali risultati dell’analisi, con visualizzazioni dinamiche per classe terapeutica, regione e trend temporali. La dashboard è accessibile pubblicamente e consente l’esplorazione autonoma dei dati da parte di stakeholder e professionisti sanitari.
+### 7. Pubblicazione della  [Dashboard Interattiva](https://carchedimarco88-jpg.github.io/Progetto_AIFA_Pharma/dashboard.html)
 
-[Dashboard Interattiva](https://carchedimarco88-jpg.github.io/Progetto_AIFA_Pharma/dashboard.html)  
-Visualizzazione dinamica dei trend di consumo farmaci per regione e classe terapeutica.
+È stata creata una dashboard web interattiva che sintetizza i principali risultati dell’analisi, con visualizzazione dinamica dei trend temporali di consumo farmaci per regione e classe terapeutica. La dashboard è accessibile pubblicamente e consente l’esplorazione autonoma dei dati da parte di stakeholder e professionisti sanitari al seguente link [Dashboard Interattiva](https://carchedimarco88-jpg.github.io/Progetto_AIFA_Pharma/dashboard.html).
 
 ---
 
@@ -143,11 +143,11 @@ Visualizzazione dinamica dei trend di consumo farmaci per regione e classe terap
 ### Query #1 – Totale spesa per anno, regione e categoria ATC lv.1
 
 La query completa è disponibile in  
-[queries/Totale_spesa_per_anno_regione_codATCliv1.sql](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/blob/main/queries/Totale_spesa_per_anno_regione_codATCliv1.sql)
+[Totale spesa per anno, regione e categoria ATC lv.1](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/blob/main/queries/Totale_spesa_per_anno_regione_codATCliv1.sql)
 
 ---
 
-- ## Dataset pubblico su BigQuery
+## Dataset pubblico su BigQuery
 
 Il dataset creato per lo studio con le tabelle AIFA è disponibile pubblicamente su BigQuery e contiene i dati AIFA sul consumo dei farmaci dal 2016 al 2023.
 
@@ -162,11 +162,12 @@ Il dataset è in sola lettura: non è possibile modificarlo.
 
 ---
 
-## Report Statici
+## Report Statici 
 
 ### Analisi Variazione Categorie Farmaceutiche ATC Pre e Post COVID19
 
 ![Confronti](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/raw/main/Screenshot%202025-08-23%20195415.png)
+[Figura.2](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/blob/main/ANALISI%20VARIAZIONE%20CATEGORIE%20FARMACEUTICHE%20ATC%20PRE%20E%20POST%20COVID19.pdf) Confronto della spesa farmaceutica in Italia tra fase pre e la fase post Covid19 suddivisa per categoria ATC.
 
 Questa sezione del progetto analizza la variazione di spesa farmaceutica per categoria ATC (livello 1) tra il periodo **Pre-COVID (2016–2019)** e **Post-COVID (2020–2023)**, a partire dal database ottenuto dalle tabelle open dell'AIFA.
 
@@ -174,7 +175,7 @@ Questa sezione del progetto analizza la variazione di spesa farmaceutica per cat
 
 ## Report RMarkdown
 
-Il file [Analisi consumo farmaci – RMarkdown](https://rpubs.com/CarchediFRM/1338164) contiene:
+Il file [Analisi spesa farmaceutica – RMarkdown](https://rpubs.com/CarchediFRM/1338164) contiene:
 
 - Pulizia e aggregazione del dataset AIFA (2016–2023)
 - Analisi dei trend per classe ATC
@@ -186,11 +187,24 @@ Può essere compilato in HTML o PDF direttamente da RStudio.
 
 ---
 
+### [Dashboard Interattiva](https://carchedimarco88-jpg.github.io/Progetto_AIFA_Pharma/dashboard.html)
+La dashboard analizza il consumo di farmaci in Italia dal 2016 al 2023, con visualizzazioni dinamiche e confronti regionali e terapeutici. Utilizza dati ATC per evidenziare trend, variazioni post-COVID e previsioni future.
+
+- Visualizza una tabella interattiva con dati per anno, regione, classe ATC e spesa totale
+- Mostra la distribuzione della spesa per categoria ATC tramite boxplot
+- Analizza la spesa media per classe terapeutica con grafico a barre ruotate
+- Confronta la spesa Pre vs Post COVID per ogni categoria ATC
+- Evidenzia la spesa totale per regione, ordinata per valore
+- Include una previsione automatica della spesa farmaceutica con il modello **Prophet**
+
+---
+
 ## Conclusioni
 
 L’analisi dei consumi AIFA in Italia (2016–2023) ha messo in luce cambiamenti significativi in specifiche classi ATC, con implicazioni per la programmazione sanitaria e l’ottimizzazione della spesa.
 
 ![Illustrazione](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/raw/main/Screenshot%202025-08-23%20210329.png)
+[Figura.3](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/blob/main/ANALISI%20DELLA%20SPESA%20FARMACEUTICA%20PRO%20CAPITE%20PER%20REGIONE.pdf) Analisi della spesa procapite per regione ed ATC sulla base dei dati ISTAT.
 
 ### Consumo di antineoplastici e immunomodulatori (ATC L)
 
@@ -212,6 +226,7 @@ La disponibilità di nuovi antivirali orali per COVID-19 (molnupiravir, nirmatre
 Nonostante le iniziative di stewardship, il consumo è salito del 12 % (da 820 a 920 DDD/1000 abitanti·die), probabilmente per l’uso preventivo in setting ospedalieri durante le ondate pandemiche e per l’incremento delle terapie combinate nei pazienti critici.
 
 ![Screenshot 2025-08-23 204158](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/blob/main/Screenshot%202025-08-24%20001510.png)
+[Figura.3](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/blob/main/ANALISI%20DELLA%20SPESA%20FARMACEUTICA%20PRO%20CAPITE%20PER%20REGIONE.pdf) La Heatmap ci permette di individuare valori fuori media nella spesa relle regioni per un categoria farmaceutica. Il grafico a colonne impilate ci permette di apprezzare la variazione della spesa farmaceutica in ciascun anno ed in proporzione tra categorie ATC.
 
 ## Impatto clinico e gestionale
 
