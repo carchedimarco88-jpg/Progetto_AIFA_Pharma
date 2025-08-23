@@ -41,6 +41,8 @@ _Dott. Carchedi Foca R.M. – Farmacista Abilitato & Data Analyst_
 
 Lo scopo del seguente progetto è stato di analizzare in modo strutturato gli Open Data dell'AIFA relativi alla spesa e al consumo di farmaci in Italia con l'obbiettivo di individuare e prevedere i trend, le anomalie e le differenze regionali per supportare decisioni cliniche, politiche sanitarie, ottimizzare la spesa sanitaria e migliorare la pianificazione delle risorse.
 
+![qualsiasi](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/raw/main/Screenshot%202025-08-23%20195157.png)
+
 ### Domanda di ricerca
 Quali classi di farmaci mostrano un aumento significativo nel consumo tra il 2016 e il 2023 e come possiamo prevedere il consumo futuro per supportare decisioni di politica sanitaria e medicina di precisione.
 
@@ -155,13 +157,16 @@ Il dataset è in sola lettura: non è possibile modificarlo.
 ## Report Statici
 
 ### Analisi Variazione Categorie Farmaceutiche ATC Pre e Post COVID19
+
+![Confronti](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/raw/main/Screenshot%202025-08-23%20195415.png)
+
 Questa sezione del progetto analizza la variazione di spesa farmaceutica per categoria ATC (livello 1) tra il periodo **Pre-COVID (2016–2019)** e **Post-COVID (2020–2023)**, a partire dal database ottenuto dalle tabelle open dell'AIFA.
 
 ---
 
 ## Report RMarkdown
 
-Il file [Analisi consumo farmaci – RMarkdown](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/blob/main/reports/Analisi%20consumo%20farmaci.rmd) contiene:
+Il file [Analisi consumo farmaci – RMarkdown](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/blob/main/Analisi-consumo-farmaci.html) contiene:
 
 - Pulizia e aggregazione del dataset AIFA (2016–2023)
 - Analisi dei trend per classe ATC
@@ -176,6 +181,8 @@ Può essere compilato in HTML o PDF direttamente da RStudio.
 ## Conclusioni
 
 L’analisi dei consumi AIFA in Italia (2016–2023) ha messo in luce cambiamenti significativi in specifiche classi ATC, con implicazioni per la programmazione sanitaria e l’ottimizzazione della spesa.
+
+![Illustrazione](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/raw/main/Screenshot%202025-08-23%20210329.png)
 
 ### Consumo di antineoplastici e immunomodulatori (ATC L)
 
@@ -195,6 +202,8 @@ La disponibilità di nuovi antivirali orali per COVID-19 (molnupiravir, nirmatre
 ### Antimicrobici per uso sistemico (ATC J01)
 
 Nonostante le iniziative di stewardship, il consumo è salito del 12 % (da 820 a 920 DDD/1000 abitanti·die), probabilmente per l’uso preventivo in setting ospedalieri durante le ondate pandemiche e per l’incremento delle terapie combinate nei pazienti critici.
+
+![Screenshot 2025-08-23 204158](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/raw/main/Screenshot%202025-08-23%20204158.png)
 
 ## Impatto clinico e gestionale
 
