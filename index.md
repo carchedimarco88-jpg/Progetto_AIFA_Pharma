@@ -1,3 +1,10 @@
+<!--
+Titolo: Analisi del Consumo Farmaci in Italia
+Autore: dott. Foca Marco Carchedi
+Data: 23 agosto 2025
+Descrizione: Studio sull’andamento del consumo farmaceutico in Italia tra il 2016 e il 2023.
+-->
+
 
 # Analisi del Consumo di Farmaci in Italia
 
