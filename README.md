@@ -123,7 +123,7 @@ Inoltre, i dataset ottenuti con SQL sono stati incrociati con gli Open Data dell
 ### 7. Pubblicazione della dashboard interattiva  
 È stata creata una dashboard web interattiva che sintetizza i principali risultati dell’analisi, con visualizzazioni dinamiche per classe terapeutica, regione e trend temporali. La dashboard è accessibile pubblicamente e consente l’esplorazione autonoma dei dati da parte di stakeholder e professionisti sanitari.
 
-[Accedi alla dashboard](https://carchedimarco88-jpg.github.io/Progetto_AIFA_Pharma/)
+> **Dashboard disponibile**: [Visualizza la versione interattiva online](https://carchedimarco88-jpg.github.io/Progetto_AIFA_Pharma/)
 
 ---
 
