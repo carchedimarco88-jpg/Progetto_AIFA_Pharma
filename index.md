@@ -31,13 +31,12 @@ Descrizione: Studio sull’andamento del consumo farmaceutico in Italia tra il 2
    - [Fasi del Lavoro](#Fasi-del-Lavoro)
    
 ### 3. [Risultati e discussione](#Risultati-e-discussione)
-   - [Fasi del Lavoro](#fasi-del-lavoro)
    - [Query SQL](#query-sql)
    - [Dataset pubblico su BigQuery](#Dataset-pubblico-su-BigQuery)
    - [Report Statici](#Report-Statici)
    - [Report RMarkdown](#Report-RMarkdown)
    - [Dashboard Interattiva](#Dashboard-Interattiva) con modello **Prophet**
-   - [Verifica di coerenza](#Verifica-di-coerenza) (o validazione empirica)
+   - [Validazione empirica](#Validazione-empirica) 
      
 ### • [Conclusioni](Conclusioni)  
 
@@ -210,7 +209,7 @@ La dashboard analizza il consumo di farmaci in Italia dal 2016 al 2023, con visu
 - Evidenzia la spesa totale per regione, ordinata per valore
 - Include una previsione automatica della spesa farmaceutica con il modello **Prophet**
 
-### Verifica di coerenza (o validazione empirica)
+### Validazione empirica
 
 Per confermare la coerenza dei dati elaborati, è stato effettuato un confronto diretto con i valori lordi pubblicati da AIFA nei report ufficiali OsMed. I dati estratti tramite script Python dai PDF istituzionali sono stati incrociati con quelli aggregati su BigQuery e normalizzati pro capite. Il confronto ha evidenziato una corrispondenza significativa tra i valori di spesa per classe ATC e regione, sia in termini di andamento temporale che di distribuzione territoriale. Questa sovrapposizione conferma la validità del processo di parsing, aggregazione e analisi, e rafforza l’affidabilità del modello predittivo come strumento di supporto alle decisioni cliniche e di politica sanitaria.
 
