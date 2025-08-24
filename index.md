@@ -45,6 +45,16 @@ Descrizione: Studio sull’andamento del consumo farmaceutico in Italia tra il 2
 
 ---
 
+<div class="info-links">
+  <h4>* Documentazione</h4>
+  <ul>
+    <li>📄 <a href="https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/blob/main/README.md" target="_blank">README del progetto</a></li>
+    <li>🛡️ <a href="https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/blob/main/LICENSE" target="_blank">Licenza</a></li>
+  </ul>
+</div>
+
+
+---
 
 
 # Introduzione
@@ -263,7 +273,7 @@ Sviluppare un cruscotto in tempo reale basato su streaming BigQuery e dashboard 
 
 ---
 
-## Riferimenti
+## Riferimenti scientifici
 
 - [AIFA Open Data](https://www.aifa.gov.it/open-data)
 
@@ -280,3 +290,14 @@ Sviluppare un cruscotto in tempo reale basato su streaming BigQuery e dashboard 
 - [Analisi degli studi clinici: come i big data predicono il successo dei farmaci](https://editverse.com/it/Analisi-degli-studi-clinici%3A-come-i-big-data-predicono-il-successo-dei-farmaci-con-un%27accuratezza-dell%2785%25/)
 
 - [Intelligenza artificiale nelle sperimentazioni cliniche: è l’ora della regolamentazione](https://www.agendadigitale.eu/sanita/intelligenza-artificiale-nelle-sperimentazioni-cliniche-e-lora-della-regolamentazione/)
+
+- Appropriatezza prescrittiva come modello clinico - *UOC Formazione e Sviluppo Professionale, Regione Lazio*  
+  [https://www.ausl.latina.it/attachments/article/6129/14.9.2022%20IMPAGINATO%20APPROPRIATEZZA%20PRESCRITTIVA.pdf](https://www.ausl.latina.it/attachments/article/6129/14.9.2022%20IMPAGINATO%20APPROPRIATEZZA%20PRESCRITTIVA.pdf)
+
+- Rapporto sull’uso dei farmaci durante l’epidemia COVID‐19 - *AIFA – Osservatorio Nazionale sull’impiego dei Medicinali*  
+  [https://www.aifa.gov.it/documents/20142/1202341/AIFA_Rapporto_uso_farmaci_durante_epidemia_COVID-19.pdf](https://www.aifa.gov.it/documents/20142/1202341/AIFA_Rapporto_uso_farmaci_durante_epidemia_COVID-19.pdf)
+
+- Medicina di precisione e sostenibilità: strumenti giuridici tra LEA e Regioni -  *Fausto Massimino*  
+[https://www.academia.edu/45059915/Medicina_di_precisione_e_sostenibilit%C3%A0_strumenti_giuridici_tra_LEA_e_Regioni](https://www.academia.edu/45059915/Medicina_di_precisione_e_sostenibilit%C3%A0_strumenti_giuridici_tra_LEA_e_Regioni)
+
+
