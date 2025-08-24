@@ -265,11 +265,11 @@ Sviluppare un cruscotto in tempo reale basato su streaming BigQuery e dashboard 
 
 ## Riferimenti
 
-- AIFA: [AIFA Open Data](https://www.aifa.gov.it/open-data)
+- [AIFA Open Data](https://www.aifa.gov.it/open-data)
 
-- AIFA: [Monitoraggio Spesa Farmaceutica](https://www.aifa.gov.it/documents/20142/241044/Monitoraggio_Spesa_gennaio-dicembre2016_agg.pdf)
+- [Monitoraggio Spesa Farmaceutica](https://www.aifa.gov.it/documents/20142/241044/Monitoraggio_Spesa_gennaio-dicembre2016_agg.pdf)
 
-- ISTAT: [Open Data Popolazione Residente](https://demo.istat.it/app/?i=POS)
+- [Open Data Popolazione Residente](https://demo.istat.it/app/?i=POS) ISTAT
 
 - [Guida CT AI/ML AIFA](https://www.aifa.gov.it/documents/20142/871583/Guida_CT_AI_ML_v_1.0_del_24.05.2021_IT.pdf)
 
