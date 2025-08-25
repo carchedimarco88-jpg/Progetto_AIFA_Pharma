@@ -219,7 +219,7 @@ Per confermare la coerenza dei dati elaborati, è stato effettuato un confronto 
 
 L’analisi dei consumi AIFA in Italia (2016–2023) ha messo in luce cambiamenti significativi in specifiche classi ATC, con implicazioni per la programmazione sanitaria e l’ottimizzazione della spesa.
 
-![Illustrazione](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/raw/main/Screenshot%202025-08-23%20210329.png)
+![Illustrazione](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/blob/main/GRAFICO3.png)
 [Figura.3](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/blob/main/ANALISI%20DELLA%20SPESA%20FARMACEUTICA%20PRO%20CAPITE%20PER%20REGIONE.pdf) Analisi della spesa procapite per regione ed ATC sulla base dei dati ISTAT.
 
 ### Consumo di antineoplastici e immunomodulatori (ATC L)
@@ -241,8 +241,8 @@ La disponibilità di nuovi antivirali orali per COVID-19 (molnupiravir, nirmatre
 
 Nonostante le iniziative di stewardship, il consumo è salito del 12 % (da 820 a 920 DDD/1000 abitanti·die), probabilmente per l’uso preventivo in setting ospedalieri durante le ondate pandemiche e per l’incremento delle terapie combinate nei pazienti critici.
 
-![Screenshot 2025-08-23 204158](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/blob/main/Screenshot%202025-08-24%20001510.png)
-[Figura.3](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/blob/main/ANALISI%20DELLA%20SPESA%20FARMACEUTICA%20PRO%20CAPITE%20PER%20REGIONE.pdf) La Heatmap ci permette di individuare valori fuori media nella spesa relle regioni per un categoria farmaceutica. Il grafico a colonne impilate ci permette di apprezzare la variazione della spesa farmaceutica in ciascun anno ed in proporzione tra categorie ATC.
+![GRAFICO4](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/blob/main/Grafico4.png)
+[Figura.3](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/blob/main/2%20-%20ANALISI%20DELLA%20SPESA%20FARMACEUTICA%20PRO%20CAPITE%20PER%20REGIONE.pdf) La Heatmap ci permette di individuare valori fuori media nella spesa relle regioni per un categoria farmaceutica. Il grafico a colonne impilate ci permette di apprezzare la variazione della spesa farmaceutica in ciascun anno ed in proporzione tra categorie ATC.
 
 ## Impatto clinico e gestionale
 
