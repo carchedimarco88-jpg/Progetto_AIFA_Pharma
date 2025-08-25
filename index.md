@@ -44,6 +44,11 @@ Descrizione: Studio sull’andamento del consumo farmaceutico in Italia tra il 2
 
 ---
 
+## Abstract
+*L’epidemiologia e la statistica rappresentano strumenti fondamentali per comprendere la distribuzione e l’andamento delle malattie, identificare fattori di rischio e valutare l’efficacia degli interventi sanitari. L’integrazione di metodi statistici avanzati con dati epidemiologici consente di trasformare informazioni grezze in evidenze utili per il decision‑making in sanità pubblica. In questo progetto, ho applicato tecniche di analisi statistica e modelli predittivi (ARIMA, Prophet, Random Forest) all’analisi della spesa farmaceutica italiana, utilizzando dati provenienti da BigQuery. L’obiettivo è stato individuare trend temporali, differenze regionali e principali driver di spesa, fornendo scenari previsionali con errore medio inferiore al 5%. I risultati evidenziano come l’uso combinato di epidemiologia e data science possa supportare una gestione più efficiente delle risorse e contribuire a politiche sanitarie basate su evidenze.*
+
+---
+
 <div class="info-links">
   <h4>* Documentazione</h4>
   <ul>
@@ -199,8 +204,8 @@ Può essere compilato in HTML o PDF direttamente da RStudio.
 
 ---
 
-### [Dashboard Interattiva](https://carchedimarco88-jpg.github.io/Progetto_AIFA_Pharma/dashboard.html)
-La dashboard analizza il consumo di farmaci in Italia dal 2016 al 2023, con visualizzazioni dinamiche e confronti regionali e terapeutici. Utilizza dati ATC per evidenziare trend, variazioni post-COVID e previsioni future.
+### Dashboard Interattiva
+La dashboard analizza il consumo di farmaci in Italia dal 2016 al 2023, con visualizzazioni dinamiche e confronti regionali e terapeutici. Utilizza dati ATC per evidenziare trend, variazioni post-COVID e previsioni future [Dashboard Interattiva](https://carchedimarco88-jpg.github.io/Progetto_AIFA_Pharma/dashboard.html).
 
 - Visualizza una tabella interattiva con dati per anno, regione, classe ATC e spesa totale
 - Mostra la distribuzione della spesa per categoria ATC tramite boxplot
@@ -222,24 +227,51 @@ L’analisi dei consumi AIFA in Italia (2016–2023) ha messo in luce cambiament
 ![GRAFICO3](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/raw/main/GRAFICO3.png)
 [Figura.3](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/blob/main/ANALISI%20DELLA%20SPESA%20FARMACEUTICA%20PRO%20CAPITE%20PER%20REGIONE.pdf) Analisi della spesa procapite per regione ed ATC sulla base dei dati ISTAT.
 
-### Consumo di antineoplastici e immunomodulatori (ATC L)
+L’andamento della spesa farmaceutica in Italia tra 2016 e 2023 evidenzia un picco eccezionale nel 2020, seguito da un rientro graduale, ma con una ricomposizione strutturale del mix terapeutico e forti differenze territoriali. La spesa pro capite nazionale passa da €137,20 nel 2019 a €161,53 nel 2020, per poi scendere a €138,37 nel 2022 e €132,60 nel 2023. Nel confronto tra periodi pre‑COVID (2016–2019) e post‑COVID (2020–2023), il totale passa da €34,47 mld a €34,97 mld (+50 mln; +1,45%), con massimo storico nel 2020 a €9,63 mld e minimo relativo nel 2023 a €7,82 mld. Questi elementi indicano che l’emergenza ha spinto temporaneamente la spesa verso l’alto, mentre la normalizzazione successiva non ha ripristinato il “vecchio” mix: il budget oggi si distribuisce in modo diverso tra le classi ATC.
 
-Tra il 2016 e il 2023 il consumo complessivo del gruppo L è cresciuto del 45 %, passando da circa 112 a 162 DDD/1000 abitanti·die. Gran parte di questo incremento è imputabile ai sottogruppi:
+---
 
-- **L01 (Antineoplastici)**: aumento del 48 % (da 75 a 111 DDD)
-- **L04 (Immunosoppressori)**: aumento del 42 % (da 37 a 53 DDD)
+## Ricomposizione del mix terapeutico
 
-### Farmaci del sistema respiratorio (ATC R)
+Il confronto pre/post pandemia mette in luce spostamenti non transitori. Crescono in valore assoluto le categorie C - Cardiovascolare (+€521,2 mln; +20,78%), V - Vari (+€468,2 mln; +24,45%), P - Antiparassitari (+€459,6 mln; +25,76%), A - Gastrointestinale (+€283,8 mln; +13,18%) e B - Sangue (+€178,7 mln; +6,87%). Calano S - Organi di senso (−€717,5 mln; −26,47%), D - Dermatologici (−€440,0 mln; −15,53%), J - Antimicrobici sistemici (−€283,2 mln; −10,36%), N Sistema nervoso (−€212,7 mln; −10,73%) e, marginalmente, M Muscolo‑scheletrico (−€56,8 mln; −2,36%). Il ranking si riallinea: C - guadagna il 1° posto (dal 9°), S - scende dal 4° al 13°, D - dal 2° al 9°, J - dal 3° al 7°. La dispersione tra categorie aumenta leggermente nel post, segnale di maggiore variabilità interna.
 
-Il gruppo R ha registrato un incremento del 29 % nel consumo, da 210 a 270 DDD/1000 abitanti·die, soprattutto per i broncodilatatori e corticosteroidi tramite inalatori, riflettendo sia i postumi della pandemia sia cambiamenti nelle linee guida terapeutiche per BPCO e asma severo.
+Questa ricomposizione suggerisce tre priorità:  
+1. La spesa privilegia la gestione cronica (C - Cardiovascolare, A - Gastrointestinale), che richiede continuità terapeutica e approvvigionamenti stabili.  
+2. Le categorie Vari e Antiparassitari (V, P) riflettono pressioni su voci trasversali o legate a contingenze.
+3. La contrazione di S, D ed N è coerente con la riduzione degli accessi e delle prestazioni elettive nel biennio pandemico, con un recupero ancora incompleto, per cui servono budget flessibili capaci di accompagnare il rimbalzo ambulatoriale.
 
-### Antivirali sistemici (ATC J05)
+---
 
-La disponibilità di nuovi antivirali orali per COVID-19 (molnupiravir, nirmatrelvir/ritonavir) e l’uso esteso dei farmaci antiretrovirali hanno portato a un aumento del 60 % (da 19 a 30 DDD/1000 abitanti·die) tra il 2020 e il 2023, con un picco di adozione a fine 2022.
+## Picco, rientro e normalizzazione differenziale
 
-### Antimicrobici per uso sistemico (ATC J01)
+Il 2020 amplifica le componenti sensibili all’emergenza; il 2021 avvia un riassestamento; il 2022–2023 consolidano il rientro sotto i livelli 2018–2019. La normalizzazione è differenziale: la categoria R - Sistema respiratorio, pur tra i top spender, mostra una lieve contrazione nel post (−1% medio), coerente con la riduzione dopo i picchi emergenziali; gli antineoplastici e immunomodulatori mantiengono un peso elevato e stabile, coerente con la continuità dei percorsi specialistici. Il quadro complessivo è una riallocazione della spesa verso categorie ad alta cronicità e ad alto impatto specialistico, con persistente debolezza delle aree elettive non ancora tornate ai volumi pre‑pandemici.
 
-Nonostante le iniziative di stewardship, il consumo è salito del 12 % (da 820 a 920 DDD/1000 abitanti·die), probabilmente per l’uso preventivo in setting ospedalieri durante le ondate pandemiche e per l’incremento delle terapie combinate nei pazienti critici.
+---
+
+## Eterogeneità territoriale e rischio di disequità
+
+Nel quinquennio 2019–2023, la media nazionale pro capite è €145,50, ma le distanze sono estreme: Valle d’Aosta (€2.988) e Molise (€918) sono multipli della media; Trentino‑Alto Adige (€630) resta stabilmente elevato. All’opposto, Lombardia (€47,97), Campania (€67,19) e Lazio (€65,03) presentano valori persistentemente inferiori. Il rapporto VdA/Lombardia sfiora 62×, riflesso dell’effetto dimensionale e del peso di spese fisse su bacini demografici ridotti. La volatilità di Basilicata (da €387 a €914), Sardegna (da €338 a €156 nel 2020 con successiva risalita) e Molise (picco €1.135 nel 2021) indica che strategie di acquisto e gestione stock devono essere calibrate sul rischio di shock locali e sulla dimensione demografica: in regioni piccole, l’attivazione di poche terapie ad altissimo costo o la centralizzazione di percorsi specialistici può ribaltare i valori pro capite di un intero anno.
+
+Una pianificazione efficace richiede cluster regionali per dimensione e profilo clinico, con confronto sistematico di scostamenti di spesa pro capite, costo medio per trattamento e mix ATC rispetto a benchmark nazionali, supportati da dashboard interattive e monitoraggio continuo.
+
+---
+
+## Implicazioni operative per acquisti e governo della spesa
+
+L’obiettivo non è ridurre indiscriminatamente la spesa, ma allineare procurement, contratti e budget ai profili di crescita e alla variabilità territoriale.
+
+- **Classi in crescita strutturale**: contratti pluriennali con opzioni di volume; aggregazione d’acquisto multi‑azienda; previsioni rolling trimestrali per prevenire rotture di stock; preferenziazioni terapeutiche e switch assistiti dove esistono alternative equivalenti; per L, accordi basati su esiti e risk‑sharing, rapida adozione di biosimilari e managed entry agreements, governance dei centri prescrittori per ridurre variabilità intra‑regionale.
+- **Aree in calo o in recupero**: budget flessibili e indicatori sentinella sui volumi ambulatoriali; gare con lotti dinamici per riallineare le quantità senza oversupply; pianificazione del recupero liste di attesa specialistiche; per J, rafforzamento della stewardship con criteri di acquisto aderenti a linee guida e auditing prescrittivo abbinato a dashboard di uso/spesa.
+- **Procurement e mitigazione del rischio**: pooling interregionale per regioni piccole/ad alta volatilità; benchmarking prezzi centralizzato; clausole di indicizzazione per shock di filiera; dual sourcing per categorie critiche; pianificazione rolling a 12 mesi con scenari alto‑medio‑basso e soglie di riordino dinamiche basate su lead time e variabilità storica.
+- **Misurazione e accountability**: KPI di cruscotto su costo medio per paziente nelle top classi di spesa, tasso di adozione di biosimilari, scostamento mensile dal forecast per classe e area vasta, incidenza delle classi L‑C‑A sulla spesa e loro varianza intra‑regionale, tassi di appropriatezza per antimicrobici rispetto a linee guida; revisione trimestrale congiunta acquisti‑farmacia ospedaliera‑clinici per riallineare volumi e mix.
+
+---
+
+## Sintesi finale
+
+Il sistema è uscito dalla fase emergenziale con spesa totale normalizzata ma con un mix più cronico‑specialistico. Le priorità di governo sono: garantire continuità di approvvigionamento nelle classi in crescita, adottare contratti basati su valore per terapie ad alto impatto, rafforzare stewardship e appropriatezza nelle aree a rischio di uso non ottimale, e ridurre la volatilità territoriale. La combinazione di procurement intelligente, misurazione trasparente e confronto interregionale continuo rappresenta la via più concreta per migliorare efficienza ed equità nella spesa farmaceutica.
+
+
 
 ![GRAFICO4](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/raw/main/Grafico4.png)
 [Figura.3](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/blob/main/2%20-%20ANALISI%20DELLA%20SPESA%20FARMACEUTICA%20PRO%20CAPITE%20PER%20REGIONE.pdf) La Heatmap ci permette di individuare valori fuori media nella spesa relle regioni per un categoria farmaceutica. Il grafico a colonne impilate ci permette di apprezzare la variazione della spesa farmaceutica in ciascun anno ed in proporzione tra categorie ATC.
