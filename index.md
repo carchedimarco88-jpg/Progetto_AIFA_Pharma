@@ -60,7 +60,7 @@ Descrizione: Studio sull’andamento del consumo farmaceutico in Italia tra il 2
 
 Lo scopo del seguente progetto è stato di analizzare in modo strutturato gli Open Data dell'AIFA relativi alla spesa e al consumo di farmaci in Italia con l'obbiettivo di individuare e prevedere i trend, le anomalie e le differenze regionali per supportare decisioni cliniche, politiche sanitarie, ottimizzare la spesa sanitaria e migliorare la pianificazione delle risorse.
 
-![qualsiasi](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/raw/main/Screenshot%202025-08-23%20195157.png)
+![GRAFICO1](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/raw/main/Screenshot%202025-08-23%20195157.png)
 [Figura.1](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/blob/main/ANALISI%20VARIAZIONE%20CATEGORIE%20FARMACEUTICHE%20ATC%20PRE%20E%20POST%20COVID19.pdf) Classifica delle categorie farmaceutiche ATC in Italia in funzione della variazione di spesa nei periodi pre e post Covid-19.
 
 ### Domanda di ricerca
@@ -178,7 +178,7 @@ Il dataset è in sola lettura: non è possibile modificarlo.
 
 ### Analisi Variazione Categorie Farmaceutiche ATC Pre e Post COVID19
 
-![Confronti](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/raw/main/Screenshot%202025-08-23%20195415.png)
+![GRAFICO2](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/raw/main/Screenshot%202025-08-23%20195415.png)
 [Figura.2](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/blob/main/ANALISI%20VARIAZIONE%20CATEGORIE%20FARMACEUTICHE%20ATC%20PRE%20E%20POST%20COVID19.pdf) Confronto della spesa farmaceutica in Italia tra fase pre e la fase post Covid19 suddivisa per categoria ATC.
 
 Questa sezione del progetto analizza la variazione di spesa farmaceutica per categoria ATC (livello 1) tra il periodo **Pre-COVID (2016–2019)** e **Post-COVID (2020–2023)**, a partire dal database ottenuto dalle tabelle open dell'AIFA.
@@ -219,7 +219,7 @@ Per confermare la coerenza dei dati elaborati, è stato effettuato un confronto 
 
 L’analisi dei consumi AIFA in Italia (2016–2023) ha messo in luce cambiamenti significativi in specifiche classi ATC, con implicazioni per la programmazione sanitaria e l’ottimizzazione della spesa.
 
-![Illustrazione](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/blob/main/GRAFICO3.png)
+![GRAFICO3](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/raw/main/GRAFICO3.png)
 [Figura.3](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/blob/main/ANALISI%20DELLA%20SPESA%20FARMACEUTICA%20PRO%20CAPITE%20PER%20REGIONE.pdf) Analisi della spesa procapite per regione ed ATC sulla base dei dati ISTAT.
 
 ### Consumo di antineoplastici e immunomodulatori (ATC L)
@@ -241,7 +241,7 @@ La disponibilità di nuovi antivirali orali per COVID-19 (molnupiravir, nirmatre
 
 Nonostante le iniziative di stewardship, il consumo è salito del 12 % (da 820 a 920 DDD/1000 abitanti·die), probabilmente per l’uso preventivo in setting ospedalieri durante le ondate pandemiche e per l’incremento delle terapie combinate nei pazienti critici.
 
-![GRAFICO4](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/blob/main/Grafico4.png)
+![GRAFICO4](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/raw/main/Grafico4.png)
 [Figura.3](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/blob/main/2%20-%20ANALISI%20DELLA%20SPESA%20FARMACEUTICA%20PRO%20CAPITE%20PER%20REGIONE.pdf) La Heatmap ci permette di individuare valori fuori media nella spesa relle regioni per un categoria farmaceutica. Il grafico a colonne impilate ci permette di apprezzare la variazione della spesa farmaceutica in ciascun anno ed in proporzione tra categorie ATC.
 
 ## Impatto clinico e gestionale
