@@ -159,10 +159,10 @@ Inoltre, i dataset ottenuti con SQL sono stati incrociati con gli Open Data dell
 
 ## Risultati chiave
 
-- individuazione delle classi ATC con variazioni di consumo più marcate  
-- previsioni di consumo per il triennio successivo  
-- dashboard e report per stakeholder non tecnici  
-- dataset AIFA 2016–2023 pubblicato su BigQuery  
+- Individuazione delle classi ATC con variazioni di consumo più marcate  
+- Previsioni di consumo per il triennio successivo  
+- Dashboard e report per stakeholder non tecnici  
+- Dataset AIFA 2016–2023 pubblicato su BigQuery  
 
 ---
 
