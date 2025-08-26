@@ -72,9 +72,9 @@ Lo scopo del seguente progetto è stato di analizzare in modo strutturato gli Op
 Quali classi di farmaci mostrano un aumento significativo nel consumo tra il 2016 e il 2023 e come possiamo prevedere il consumo futuro per supportare decisioni di politica sanitaria e medicina di precisione.
 
 La domanda è:
-Quantitativa (analisi e modelli)
-Applicabile (politiche sanitarie)
-Innovativa (collegamento alla medicina personalizzata)
+- Quantitativa (analisi e modelli)
+- Applicabile (politiche sanitarie)
+- Innovativa (medicina personalizzata)
 
 ---
 
@@ -274,7 +274,7 @@ Il sistema è uscito dalla fase emergenziale con spesa totale normalizzata ma co
 
 
 ![GRAFICO4](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/raw/main/Grafico4.png)
-[Figura.3](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/blob/main/2%20-%20ANALISI%20DELLA%20SPESA%20FARMACEUTICA%20PRO%20CAPITE%20PER%20REGIONE.pdf) La Heatmap ci permette di individuare valori fuori media nella spesa relle regioni per un categoria farmaceutica. Il grafico a colonne impilate ci permette di apprezzare la variazione della spesa farmaceutica in ciascun anno ed in proporzione tra categorie ATC.
+[Figura.3](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/blob/main/2%20-%20ANALISI%20DELLA%20SPESA%20FARMACEUTICA%20PRO%20CAPITE%20PER%20REGIONE.pdf) La Heatmap ci permette di individuare valori fuori media nella spesa relle regioni per un categoria farmaceutica. Il grafico a colonne impilate evidenzia la variazione della spesa farmaceutica in ciascun anno ed in proporzione tra categorie ATC.
 
 ## Impatto clinico e gestionale
 
