@@ -80,11 +80,13 @@ La domanda è:
 
 # Tecnologie e Metodi
  
-- BigQuery
-- SQL
-- Excel   
-- Python
-- R
+| Strumento    | Utilizzo principale                                     |
+|--------------|----------------------------------------------------------|
+| BigQuery     | hosting e interrogazione del dataset AIFA                |
+| SQL          | estrazione, aggregazione e preparazione dei dati         |
+| Python       | pulizia automatizzata, estrazione dati da PDF            |
+| Excel        | analisi preliminare, incrocio con dati ISTAT             |
+| R            | modellazione predittiva e report automatici con RMarkdown |
 
 ## Sintesi Metodologica
 
