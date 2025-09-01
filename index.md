@@ -26,21 +26,22 @@ Descrizione: Studio sull’andamento del consumo farmaceutico in Italia tra il 2
 ### 1. [Introduzione](#introduzione)
    - [Domanda di ricerca](#domanda-di-ricerca)
 
-### 2. [Tecnologie e Metodi](#Tecnologie-e-Metodi)
-   - [Sintesi Metodologica](Sintesi-Metodologica)
-   - [Fasi del Lavoro](#Fasi-del-Lavoro)
-   
-### 3. [Risultati e discussione](#Risultati-e-discussione)
-   - [Query SQL](#query-sql)
-   - [Dataset pubblico su BigQuery](#Dataset-pubblico-su-BigQuery)
-   - [Report Statici](#Report-Statici)
-   - [Report RMarkdown](#Report-RMarkdown)
-   - [Dashboard Interattiva](#Dashboard-Interattiva) con modello **Prophet**
-   - [Validazione empirica](#Validazione-empirica) 
-     
-### • [Conclusioni](Conclusioni)  
+### 2. [Tecnologie e Metodi](#tecnologie-e-metodi)
+   - [Sintesi metodologica](#sintesi-metodologica)
+   - [Fasi del lavoro](#fasi-del-lavoro)
 
-### • [Riferimenti](#riferimenti)  
+### 3. [Risultati e discussione](#risultati-e-discussione)
+   - [Query SQL](#query-sql)
+   - [Dataset pubblico su BigQuery](#dataset-pubblico-su-bigquery)
+   - [Report statici](#report-statici)
+   - [Report RMarkdown](#report-rmarkdown)
+   - [Dashboard interattiva](#dashboard-interattiva)
+   - [Validazione empirica](#validazione-empirica)
+
+### • [Conclusioni](#conclusioni)
+
+### • [Riferimenti](#riferimenti)
+
 
 ---
 
