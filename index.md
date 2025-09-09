@@ -237,7 +237,7 @@ Per confermare la coerenza dei dati elaborati, è stato effettuato un confronto 
 L’analisi dei consumi AIFA in Italia (2016–2023) ha messo in luce cambiamenti significativi in specifiche classi ATC, con implicazioni per la programmazione sanitaria e l’ottimizzazione della spesa.
 
 ![GRAFICO3](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/raw/main/GRAFICO3.png)
-[Figura.3](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/blob/main/ANALISI%20DELLA%20SPESA%20FARMACEUTICA%20PRO%20CAPITE%20PER%20REGIONE.pdf) Analisi della spesa procapite per regione ed ATC sulla base dei dati ISTAT.
+[Figura.3](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/blob/main/2%20-%20ANALISI%20DELLA%20SPESA%20FARMACEUTICA%20PRO%20CAPITE%20PER%20REGIONE.pdf) Analisi della spesa procapite per regione ed ATC sulla base dei dati ISTAT.
 
 L’andamento della spesa farmaceutica in Italia tra 2016 e 2023 evidenzia un picco eccezionale nel 2020, seguito da un rientro graduale, ma con una ricomposizione strutturale del mix terapeutico e forti differenze territoriali. La spesa pro capite nazionale passa da €137,20 nel 2019 a €161,53 nel 2020, per poi scendere a €138,37 nel 2022 e €132,60 nel 2023. Nel confronto tra periodi pre‑COVID (2016–2019) e post‑COVID (2020–2023), il totale passa da €34,47 mld a €34,97 mld (+50 mln; +1,45%), con massimo storico nel 2020 a €9,63 mld e minimo relativo nel 2023 a €7,82 mld. Questi elementi indicano che l’emergenza ha spinto temporaneamente la spesa verso l’alto, mentre la normalizzazione successiva non ha ripristinato il “vecchio” mix: il budget oggi si distribuisce in modo diverso tra le classi ATC.
 
@@ -286,7 +286,7 @@ Il sistema è uscito dalla fase emergenziale con spesa totale normalizzata ma co
 
 
 ![GRAFICO4](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/raw/main/Grafico4.png)
-[Figura.3](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/blob/main/2%20-%20ANALISI%20DELLA%20SPESA%20FARMACEUTICA%20PRO%20CAPITE%20PER%20REGIONE.pdf) La Heatmap ci permette di individuare valori fuori media nella spesa relle regioni per un categoria farmaceutica. Il grafico a colonne impilate evidenzia la variazione della spesa farmaceutica in ciascun anno ed in proporzione tra categorie ATC.
+[Figura.4](https://github.com/carchedimarco88-jpg/Progetto_AIFA_Pharma/blob/main/2%20-%20ANALISI%20DELLA%20SPESA%20FARMACEUTICA%20PRO%20CAPITE%20PER%20REGIONE.pdf) La Heatmap ci permette di individuare valori fuori media nella spesa relle regioni per un categoria farmaceutica. Il grafico a colonne impilate evidenzia la variazione della spesa farmaceutica in ciascun anno ed in proporzione tra categorie ATC.
 
 ## Impatto clinico e gestionale
 
