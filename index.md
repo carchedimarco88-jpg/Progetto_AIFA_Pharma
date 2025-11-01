@@ -316,7 +316,7 @@ Sviluppare un cruscotto in tempo reale basato su streaming BigQuery e dashboard 
 
 ---
 
-## Riferimenti scientifici
+## Riferimenti
 
 - [AIFA Open Data](https://www.aifa.gov.it/open-data)
 
