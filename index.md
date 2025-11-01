@@ -318,7 +318,7 @@ Sviluppare un cruscotto in tempo reale basato su streaming BigQuery e dashboard 
 
 ## Riferimenti
 
-- [AIFA Open Data](https://www.aifa.gov.it/open-data)
+- [AIFA Open Data](https://www.aifa.gov.it/spesa-e-consumo-relativi-al-flusso-della-farmaceutica-convenzionata-e-degli-acquisti-diretti)
 
 - [Monitoraggio Spesa Farmaceutica](https://www.aifa.gov.it/documents/20142/241044/Monitoraggio_Spesa_gennaio-dicembre2016_agg.pdf)
 
